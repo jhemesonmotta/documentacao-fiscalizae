@@ -70,13 +70,22 @@
                             <a href="#dataset" title="src/app/components/dashboard/partials/partial-graficos/mocked-data.ts"><b>dataset</b>&nbsp;&nbsp;&nbsp;(src/.../mocked-data.ts)</a>
                         </li>
                         <li>
-                            <a href="#environment" title="src/environments/environment.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
-                        </li>
-                        <li>
                             <a href="#environment" title="src/environments/environment.prod.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.prod.ts)</a>
                         </li>
                         <li>
+                            <a href="#environment" title="src/environments/environment.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#maiores_gastos" title="src/app/services/maioresGastosData.ts"><b>maiores_gastos</b>&nbsp;&nbsp;&nbsp;(src/.../maioresGastosData.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#mediana_gastos_predicao" title="src/app/services/medianaGastosPredicaoData.ts"><b>mediana_gastos_predicao</b>&nbsp;&nbsp;&nbsp;(src/.../medianaGastosPredicaoData.ts)</a>
+                        </li>
+                        <li>
                             <a href="#month_median" title="src/app/services/monthMedianData.ts"><b>month_median</b>&nbsp;&nbsp;&nbsp;(src/.../monthMedianData.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#soma_gastos_predicao" title="src/app/services/somaGastosPredicaoData.ts"><b>soma_gastos_predicao</b>&nbsp;&nbsp;&nbsp;(src/.../somaGastosPredicaoData.ts)</a>
                         </li>
                         <li>
                             <a href="#year_accumulated" title="src/app/services/yearAccumulatedData.ts"><b>year_accumulated</b>&nbsp;&nbsp;&nbsp;(src/.../yearAccumulatedData.ts)</a>
@@ -206,38 +215,6 @@
             </tbody>
         </table>
 </section>
-    <h3>src/environments/environment.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="environment"></a>
-                        <span class="name">
-                            <b>
-                            environment</b>
-                            <a href="#environment"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>{
-  production: false
-}</code>
-                        </td>
-                    </tr>
-
-
-            </tbody>
-        </table>
-</section>
     <h3>src/environments/environment.prod.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
@@ -270,6 +247,1212 @@
             </tbody>
         </table>
 </section>
+    <h3>src/environments/environment.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="environment"></a>
+                        <span class="name">
+                            <b>
+                            environment</b>
+                            <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  production: false
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/services/maioresGastosData.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="maiores_gastos"></a>
+                        <span class="name">
+                            <b>
+                            maiores_gastos</b>
+                            <a href="#maiores_gastos"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    &#x27;columns&#x27;: [
+      &#x27;dates&#x27;,
+      &#x27;orgao&#x27;,
+      &#x27;uasg&#x27;,
+      &#x27;ds_fundamento_legal&#x27;,
+      &#x27;ds_justificativa&#x27;,
+      &#x27;ds_objeto_licitacao&#x27;,
+      &#x27;no_cargo_resp_decl_disp&#x27;,
+      &#x27;no_responsavel_decl_disp&#x27;,
+      &#x27;vr_estimado&#x27;
+    ],
+    &#x27;data&#x27;: [
+      [
+        &#x27;2005-08-01&#x27;,
+        &#x27;COMANDO DO EXERCITO&#x27;,
+        &#x27;HOSPITAL MILITAR DE AREA DE PORTO ALEGRE&#x27;,
+        &#x27;Fundamento Legal: Artigo 25  ,  Caput  , da Lei 8.666\/93&#x27;,
+        &#x27;Justificativa: Competicao e inviavel, uma vez que se admite credenciar todas OCS que  atendam necessidades da UG-FuSEx contratante.&#x27;,
+        &#x27;Objeto: Prestacao de servico de diagnistico por &#x27;,
+        &#x27;Ordenador de Despesas do HGePA&#x27;,
+        &#x27;GILMAR CORREA DE FIGUEIREDO&#x27;,
+        18000000000.0
+      ],
+      [
+        &#x27;2014-05-16&#x27;,
+        &#x27;COMANDO DA AERONAUTICA&#x27;,
+        &#x27;MAER-GAPBR-GRUPAMENTO DE APOIO DE BRASILIA\/DF&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Conforme Ata de Acordo no004\/DCTA-COPAC\/2014, de 25\/04\/2014, o valor contratado foi considerado aceitavel pela administraca&#x27;,
+        &#x27;Objeto: Aquisicao de materiais e prestacao de s ervicos para a producao e o fornecimento de 28 aeronaves KC-390 &#x27;,
+        &#x27;Ordenador de Despesas Copac&#x27;,
+        &#x27;JOSE AUGUSTO CREPALDI AFFONSO&#x27;,
+        7255869086.0
+      ],
+      [
+        &#x27;2016-11-18&#x27;,
+        &#x27;COMANDO DO EXERCITO&#x27;,
+        &#x27;COMANDO LOGISTICO&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Inciso I da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Inviabilidade de competicao&#x27;,
+        &#x27;Objeto: Aquisicao de viatura blindada Guarani &#x27;,
+        &#x27;Ordenador de Despesas Substituto&#x27;,
+        &#x27;MARCELO MORAES RODRIGUES&#x27;,
+        5939679681.0
+      ],
+      [
+        &#x27;2009-12-15&#x27;,
+        &#x27;COMANDO DO EXERCITO&#x27;,
+        &#x27;ESTADO-MAIOR DO EXERCITO-MEX\/DF&#x27;,
+        &#x27;Fundamento Legal: Artigo 25, inciso I, da Lei  8.666\/93&#x27;,
+        &#x27;Justificativa: I- A empresa e produtora exclusiva, em razao de estar desenvolvendo um protitipo e lote piloto.&#x27;,
+        &#x27;ao do Exercito Brasileiro, em conformidade com especificacies e composicies de Lotes anuais a serem definidos por intermedio de Termos Aditiv os. Objeto: Servico de fabricacao em serie no pais e fornecimento de 2044 (dois mil e quarenta e quatro) VIATURAS BLINDADAS DE TRANSPORTE DE PES SOAL M&gt;&gt;DIA DE RODAS (VBTP-MR), apis Ato de Adoc &#x27;,
+        &#x27;Ordenador de Despesas do EME&#x27;,
+        &#x27;CARLOS ALBERTO PASSARELLA ARANTES - CEL&#x27;,
+        5443227413.0
+      ],
+      [
+        &#x27;2016-01-04&#x27;,
+        &#x27;UNIVERSIDADE FEDERAL DO PARA&#x27;,
+        &#x27;HOSPITAL UNIVERSITARIO BETINA FERRO E SOUZA&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Fornecimento de PROTESE PARA IMPLANTE COCLEAR que atendam as necessidades dos Pacientes Oriundos do SUS.&#x27;,
+        &#x27;Objeto: Fornecimento de PROTESE PARA IMPLANTE C OCLEAR (abaixo descritos), aos usuarios do SUS de acordo com a indicacao tecnica do Hospital U niversitario Bettina Ferro de Souza, cujos prec os referentes PS prestacao de servicos, nos term os do artigo 26 da Lei. no. 8.080\/90 serao aque les constantes da Tabela SIA\/SUS do Ministerio da Saode - PORTARIAS No 1.278, DE 20 DE OUTUBRO  DE 1999 - GM\/MS E PORTARIA No 337, DE 6 DE ABR IL DE 2015 - GM\/MS. Obs.: Continuacao no Edital  1.1 do OBJETO. &#x27;,
+        &#x27;Coordenador Administrativo&#x27;,
+        &#x27;CELIO D ALBUQUERQUE NEVES FILHO&#x27;,
+        5259618000.0
+      ],
+      [
+        &#x27;2015-11-27&#x27;,
+        &#x27;INST.FED.DE EDUC.,CIENC.E TEC.DO RJ&#x27;,
+        &#x27;INST.FED.DE EDUC.,CIENC.E TEC.DO R.DE JANEIRO&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Inciso II e art. 13o, inc. VI da mesma Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Servicos tecnicos de notiria especializacao&#x27;,
+        &#x27;Objeto: Execucao de acies de qualificacao profi ssional para o segmento turismo com foco na oli mpada e paraolimpada Rio 2016. &#x27;,
+        &#x27;Ordenador de Despesas&#x27;,
+        &#x27;PAULO ROBERTO DE ASSIS PASSOS&#x27;,
+        4525000000.0
+      ],
+      [
+        &#x27;2009-04-07&#x27;,
+        &#x27;COMANDO DA AERONAUTICA&#x27;,
+        &#x27;MAER-GAPBR-GRUPAMENTO DE APOIO DE BRASILIA\/DF&#x27;,
+        &#x27;Fundamento Legal: Artigo 25, Caput, da Lei     8.666\/93&#x27;,
+        &#x27;Justificativa: Analisado pelo GAC-EMBRAER conforme relatirios 001, 004 e 006\/GAC-EMBRAER\/09-C&#x27;,
+        &#x27;Objeto: Fornecimento de 02 (dois) protitipos da  aeronave de transporte militar e reabastecimen to (Aeronave KC-X), incluindo a prestacao de se rvicos para o gerenciamento da producao e monta gem das aeronaves, entrega da documentacao do p rojeto, relatirios de desenvolvimento e certifi cacao, relatirios de voos de teste e de avaliac ao operacional e um pacote de dados de produto. &#x27;,
+        &#x27;Ordenador de Despesas&#x27;,
+        &#x27;MAJ BRIG AR DIRCEU TONDOLO NuRO&#x27;,
+        3028104951.0
+      ],
+      [
+        &#x27;2009-04-07&#x27;,
+        &#x27;COMANDO DA AERONAUTICA&#x27;,
+        &#x27;MAER-GAPBR-GRUPAMENTO DE APOIO DE BRASILIA\/DF&#x27;,
+        &#x27;Fundamento Legal: Artigo 25, Caput, da Lei     8.666\/93&#x27;,
+        &#x27;Justificativa: O preco foi analisado pela SDDP-COPAC, por intermedio do Grupo de Acompanhamen-to e Controle(GAC-EMBRAER).&#x27;,
+        &#x27;Objeto: Fornecimento de 02 (dois) protitipos da aeronave de transporte militar e reabastecimen- to (Aeronave KC-X), incluindo a prestacao    de servicos para o gerenciamento da producao     e montagem das anvs, entrega da documentacao   do projeto, relatirios de desenvolvimento e certi- ficacao, relatirios de voos de teste e de  ava- liacao operacional e um pacote de dados de pro- duto. &#x27;,
+        &#x27;Presidente da COPAC&#x27;,
+        &#x27;MAJ BRIG AR DIRCEU TONDOLO NoRO&#x27;,
+        3028104951.0
+      ],
+      [
+        &#x27;2009-04-07&#x27;,
+        &#x27;COMANDO DA AERONAUTICA&#x27;,
+        &#x27;MAER-GAPBR-GRUPAMENTO DE APOIO DE BRASILIA\/DF&#x27;,
+        &#x27;Fundamento Legal: Artigo 25, Caput, da Lei     8.666\/93&#x27;,
+        &#x27;Justificativa: O preco foi analizado pela SDDP-COPAC, por intermedio do Grupo de Acompanhamento e Controle(GAC-EMBRAER).&#x27;,
+        &#x27;Objeto: Fornecimento de 02 (dois) protitipos da  aeronave de transporte militar e reabastecimen to (Aeronave KC-X), incluindo a prestacao    de  servicos para o gerenciamento da producao    e  montagem das Aeronaves, entrega da   documenta cao do projeto, relatirios de desenvolvimento e  certificacao, relatirios de voos de teste e de  avaliacao operacional e um pacote de dados  de  produto. &#x27;,
+        &#x27;Presidente da COPAC&#x27;,
+        &#x27;MAJ BRIG AR DIRCEU TONDOLO NoRO&#x27;,
+        3028104951.0
+      ],
+      [
+        &#x27;2016-12-01&#x27;,
+        &#x27;MINISTERIO DA FAZENDA&#x27;,
+        &#x27;SUPERINTENDENCIA DE ADMINISTRACAO DO MF - PR&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Por se tratar de empresa sem concorrancia.&#x27;,
+        &#x27;Objeto: Prestacao de Servico Poblico de forneci mento de energia eletrica, de estrutura tarifar ia horaria verde, subgrupo AS. &#x27;,
+        &#x27;Gerente da DivisY&#x3D;o de Recursos Logisticos&#x27;,
+        &#x27;REGINA MARIA LOVATO DE OLIVEIRA&#x27;,
+        2516394670.0
+      ],
+      [
+        &#x27;2016-11-25&#x27;,
+        &#x27;COMANDO DA MARINHA&#x27;,
+        &#x27;CENTRO DE OBTENCAO DA MARINHA\/RJ&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Inciso I da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: A Empresa Companhia Brasileira de Cartuchos e exclusiva  para fornecimento do objeto em lide&#x27;,
+        &#x27;Objeto: Aquisicao de municao &#x27;,
+        &#x27;Ordenador de Despesas&#x27;,
+        &#x27;RICARDO YUKIO IAMAGUCHI&#x27;,
+        1890170000.0
+      ],
+      [
+        &#x27;2017-09-21&#x27;,
+        &#x27;FUNDO NACIONAL DE DESENVOLVIMENTO DA EDUCACAO&#x27;,
+        &#x27;FNDE-MEC-FUNDO NAC.DE DESENV.DA EDUACACAO\/DF&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Objeto: Prestacao dos servicos de recebimento e \/ou coleta, transporte, tratamento, distribuica o e entrega domiciliaria urbana, em !mbito naci onal, de encomendas relativas aos Programas do Livro. &#x27;,
+        &#x27;Ordenador de Despesas&#x27;,
+        &#x27;JOSE FERNANDO UCHOA COSTA NETO&#x27;,
+        1659666294.0
+      ],
+      [
+        &#x27;2012-12-06&#x27;,
+        &#x27;INSTITUTO NACIONAL DO SEGURO SOCIAL&#x27;,
+        &#x27;COORDENACAO GERAL DE LICITACOES E CONTRATOS&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XVI da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Dispensa prevista na Lei no 8.666\/93.&#x27;,
+        &#x27;Objeto: Contratacao da Empresa de Tecnologia da  Informacao da Previdancia Social - DATAPREV, p ara prestacao de servicos especializados em hos ting e colocation, suporte e manutencao de sist emas com uso de tecnologia da informacao. &#x27;,
+        &#x27;Diretor de OrSSamento, FinanSSas e Logstica&#x27;,
+        &#x27;PEDRO AUGUSTO SANGUINETTI FERREIRA&#x27;,
+        1591803686.0
+      ],
+      [
+        &#x27;2017-11-22&#x27;,
+        &#x27;MINISTERIO DA FAZENDA&#x27;,
+        &#x27;MF-SRF-SECRETARIA DA RECEITA FEDERAL\/DF&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XVI da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Contratacao do Serpro, empresa integrante da Administracao Poblica Indireta, para prestacao de servicos de TI&#x27;,
+        &#x27;Objeto: Prestacao, contnua e initerrupta, de s ervicos de producao de solucies de tecnologia d a informacao, desenvolvimento, manutencao de si stemas, modelagem de solucies de tecnologia da informacao, suporte e sustentacao referentes ao s processos da Secretaria da Receita Federal do  Brasil. &#x27;,
+        &#x27;Coordenador-geral de ProgramaSSY&#x3D;o e Logstica Substituto&#x27;,
+        &#x27;FABIO COIMBRA MIRANDA&#x27;,
+        1560332213.0
+      ],
+      [
+        &#x27;2018-11-21&#x27;,
+        &#x27;MINISTERIO DA FAZENDA&#x27;,
+        &#x27;MF-SRF-SECRETARIA DA RECEITA FEDERAL\/DF&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XVI da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Prestacao de servicos de informatica por entidade da Administracao Poblica, criada para esse fim especfico.&#x27;,
+        &#x27;Objeto: Prestacao contnua e ininterrupta de se rvicos de Tecnologia da Informacao, relativos PS  producao de solucies de TI, desenvolvimento e manutencao de sistemas, modelagem de solucies d e TI e suporte e sustentacao referentes aos pro cessos estrategicos da Secretaria da Receita Fe deral do Brasil. &#x27;,
+        &#x27;Coordenador-geral de ProgramaSSY&#x3D;o e Logstica&#x27;,
+        &#x27;MARCOS ANTONIO DA CUNHA&#x27;,
+        1549003735.0
+      ],
+      [
+        &#x27;2017-11-30&#x27;,
+        &#x27;MINISTERIO DA FAZENDA&#x27;,
+        &#x27;MF-SRF-SECRETARIA DA RECEITA FEDERAL\/DF&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XVI da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Empresa integrante da Administracao Poblica Indireta, prestadora de servicos de TI&#x27;,
+        &#x27;Objeto: Servicos de producao de solucies de TI,  desenvolvimento e manutencao de sistemas, mode lagem de solucies de TI, suporte e sustentacao referente aos processos estrategicos da RFB. &#x27;,
+        &#x27;Coordenador-geral de ProgramaSSY&#x3D;o e Logstica Substituto&#x27;,
+        &#x27;FABIO COIMBRA MIRANDA&#x27;,
+        1525996145.0
+      ],
+      [
+        &#x27;2012-08-23&#x27;,
+        &#x27;FUNDO NACIONAL DE DESENVOLVIMENTO DA EDUCACAO&#x27;,
+        &#x27;FNDE-MEC-FUNDO NAC.DE DESENV.DA EDUACACAO\/DF&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso VIII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Art. 24o, Inciso VIII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Objeto: Prestacao dos servicos de recebimento e \/ou coleta, transporte, distribuicao e comprova cao das entregas, em !mbito nacional, de encome ndas relativas aos Programas do Livro. &#x27;,
+        &#x27;Ordenador de Despesas&#x27;,
+        &#x27;RAFAEL PEREIRA TORINO&#x27;,
+        1510648028.0
+      ],
+      [
+        &#x27;2010-02-02&#x27;,
+        &#x27;COMANDO DA AERONAUTICA&#x27;,
+        &#x27;BASE AEREA DO RECIFE&#x27;,
+        &#x27;Fundamento Legal: Artigo 24, inciso XXII, da   Lei 8.666\/93&#x27;,
+        &#x27;Justificativa: Companhia concessionaria para   distribuicao de energia eletrica no Estado de  Pernambuco,conforme Dec. de 22 de marco de 2000&#x27;,
+        &#x27;Objeto: Fornecimento de energia eletrica &#x27;,
+        &#x27;Ordenador de Despesas&#x27;,
+        &#x27;JOAO MAURICIO MARQUES MAGALHAES CEL AV&#x27;,
+        1500000000.0
+      ],
+      [
+        &#x27;2016-04-29&#x27;,
+        &#x27;MINISTERIO DO DESENV. SOCIAL E COMBATE A FOME&#x27;,
+        &#x27;SECRETARIA NACIONAL DE RENDA E CIDADANIA&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Em razao do estabelecido no artigo 12 da Lei no 10.836, de 09 de janeiro de 2004.&#x27;,
+        &#x27;Objeto: Contratacao da CAIXA ECONoMICA FEDERAL (CAIXA) para a operacionalizacao do Cadastro thn ico e das acies de transferancia de renda no !m bito do Ministerio do Desenvolvimento Social e Combate PS Fome (MDS). &#x27;,
+        &#x27;Secretario Nacional&#x27;,
+        &#x27;TIAGO FALCAO SILVA&#x27;,
+        1162002495.0
+      ],
+      [
+        &#x27;2012-12-28&#x27;,
+        &#x27;MINISTERIO DA FAZENDA&#x27;,
+        &#x27;MF-SRF-SECRETARIA DA RECEITA FEDERAL\/DF&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XVI da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Servicos prestados pelo SERPRO, empresa integrante da administracao poblica federal.&#x27;,
+        &#x27;Objeto: Prestacao em regime de empreitada por p reco unitario de servicos de Tecnologia da Info rmacao - TI, compreendendo processamento de dad os,administracao de redes locais e de longa dis t!ncia, manutencao e desenvolvimento de sistema s de informacao e outros servicos de informatic a, para atendimento a todas as areas da Receita  Federal do Brasil, com fundamento no art. 2o d a Lei no 5.615, de 13 de outubro de 1970, alter ada pela Lei no 12.249, de 11 de junho de 2010. &#x27;,
+        &#x27;Coordenador-geral de ProgramaSSY&#x3D;o e Logstica Substituto&#x27;,
+        &#x27;RODRIGO OCTAVIO MACIEL&#x27;,
+        1152684678.0
+      ],
+      [
+        &#x27;2018-12-28&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XXXIV da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Dispensada licitacao por se tratar de fundacao de apoio a irgao da administracao poblica direta.&#x27;,
+        &#x27;Objeto: Vacina Humana Antigripal. &#x27;,
+        &#x27;Coordenador-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode.&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        968960000.0
+      ],
+      [
+        &#x27;2011-04-29&#x27;,
+        &#x27;MINISTERIO DA FAZENDA&#x27;,
+        &#x27;MF-SRF-SECRETARIA DA RECEITA FEDERAL\/DF&#x27;,
+        &#x27;Fundamento Legal: Artigo 24, inciso XVI, da    Lei 8.666\/93&#x27;,
+        &#x27;Justificativa: Empresa Federal criada para presfim especfico&#x27;,
+        &#x27;Objeto: Servico TI &#x27;,
+        &#x27;Coordenadora-Geral da Copol&#x27;,
+        &#x27;ANA MARTHA FONSECA DO VALLE&#x27;,
+        949545026.0
+      ],
+      [
+        &#x27;2014-02-04&#x27;,
+        &#x27;SERVICO FEDERAL DE PROCESSAMENTO DE DADOS&#x27;,
+        &#x27;SERPRO - SEDE BRASILIA&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: O Convanio de Reciprocidade intenta o cumprimento da Clausula 38 do ACT 2013\/2014.&#x27;,
+        &#x27;Objeto: Motua utilizacao da rede de prestadores  de servicos de assitancia medico-hospitalar cr edenciada &#x27;,
+        &#x27;Diretor&#x27;,
+        &#x27;ANTONIO JOAO NOCCHI PARERA&#x27;,
+        920354471.0
+      ],
+      [
+        &#x27;2018-03-29&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XXXIV da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Dispensada licitacao por se tratar de fundacao de apoio PS irgao da administracao poblica direta&#x27;,
+        &#x27;Objeto: Aquisicao de VACINA HUMANA, ANTIGRIPAL,  AQUOSA, 0,50 ML, INJETuVEL &#x27;,
+        &#x27;Coordenador-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        909600000.0
+      ],
+      [
+        &#x27;2012-12-20&#x27;,
+        &#x27;MINISTERIO DO DESENV. SOCIAL E COMBATE A FOME&#x27;,
+        &#x27;SECRETARIA NACIONAL DE RENDA E CIDADANIA&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: A contratada e o agente operador do Programa Bolsa Familia nos termos do art. 12, da Lei n.o 10.836\/2004.&#x27;,
+        &#x27;Objeto: Prestacao de servicos objetivando: A op eracionalizacao do Cadastro thnico para Programa s Sociais - Cadastro thnico;a operacionalizacao das acies de transferancia direta de renda do G overno Federal; e a operacionalizacao de acies de transferancia direta de renda dos governos e staduais, municipais ou do Distrito Federal. Pe riodo de vigancia: 30 meses, contados a partir de 01\/01\/2013. &#x27;,
+        &#x27;Secret$?rio Nacional de Renda de Cidadania&#x27;,
+        &#x27;LUIS HENRIQUE DA SILVA DE PAIVA&#x27;,
+        901800000.0
+      ],
+      [
+        &#x27;2017-03-13&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XXXIV da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Contratacao da Fundacao de Apoio ao Instituto Butantan.&#x27;,
+        &#x27;Objeto: Aquisicao de Vacina Humana Antigripal a quosa 0,50mL - Injetavel. &#x27;,
+        &#x27;Coordenador-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode.&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        864600000.0
+      ],
+      [
+        &#x27;2018-10-23&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XXXII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Por se tratar de Transferancia de Tecnologia de produto estrategico para o SUS&#x27;,
+        &#x27;Objeto: Aquisicao de CONCENTRADO DE FATOR DE CO AGULA,PO, FATOR VIII RECOMBINANTE, PO LIOFILO P \/ INJETuVEL &#x27;,
+        &#x27;Coordenadora Geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode Substituta&#x27;,
+        &#x27;ADRIANA RODOVALHO BEZERRA&#x27;,
+        864000000.0
+      ],
+      [
+        &#x27;2001-01-10&#x27;,
+        &#x27;MINISTERIO DA FAZENDA&#x27;,
+        &#x27;MF-SRF-SECRETARIA DA RECEITA FEDERAL\/DF&#x27;,
+        &#x27;Fundamento Legal: Artigo 24 ,inciso XVI ,da Lei8.666\/93&#x27;,
+        &#x27;Justificativa: Empresa poblica criada para essefim especfico&#x27;,
+        &#x27;Objeto: Prestacao de servicos de tratamento  de informacies, processamento de dados por  inter- medio de computacao eletrenica, manutencao    e desenvolvimento de sistemas e comunicacao    de dados para as areas de atuacao da Secretaria da Receita Federal &#x27;,
+        &#x27;Coordenador-Geral de ProgramaSSY&#x3D;o e Logstica&#x27;,
+        &#x27;JOS&gt;&gt; RIBAMAR MENDES DINIZ&#x27;,
+        844890117.0
+      ],
+      [
+        &#x27;2012-10-31&#x27;,
+        &#x27;COMANDO DO EXERCITO&#x27;,
+        &#x27;BASE ADMINISTRATIVA DO CCOMGEX&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XXVIII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: O envolvimento cumulativo dos aspectos da alta tecnologia e defesa nacional.&#x27;,
+        &#x27;Objeto: Servico de implantacao e integracao dos  Subsistemas de Sensoriamento e de Apoio PS Deci sao da fase inicial do Projeto Piloto do SISFRO N. RFR: Processo de Dispensa 001\/2012-ACODE-CCO MGEX.  Detalhamento dos objetos entregaveis. &#x27;,
+        &#x27;Ordenador de Depesas&#x27;,
+        &#x27;ROBSON COCINO DA COSTA&#x27;,
+        839664954.0
+      ],
+      [
+        &#x27;2012-10-31&#x27;,
+        &#x27;COMANDO DO EXERCITO&#x27;,
+        &#x27;BASE ADMINISTRATIVA DO CCOMGEX&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XXVIII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: O envolvimento cumulativo dos aspectos da alta complexidade tecnoligica e defesa nacional.&#x27;,
+        &#x27;Objeto: Servico de implantacao e integracao dos  Subsistemas de Sensoriamento e de Apoio PS Deci sao da fase inicial do Projeto Piloto do SISFRO N &#x27;,
+        &#x27;Ordenador de Despesas&#x27;,
+        &#x27;ROBSON COCINO DA COSTA&#x27;,
+        839664954.0
+      ],
+      [
+        &#x27;2008-09-04&#x27;,
+        &#x27;FUNDO NACIONAL DE DESENVOLVIMENTO DA EDUCACAO&#x27;,
+        &#x27;FNDE-MEC-FUNDO NAC.DE DESENV.DA EDUACACAO\/DF&#x27;,
+        &#x27;Fundamento Legal: Artigo 25, Caput, da Lei     8.666\/93&#x27;,
+        &#x27;Justificativa: Artigo 25, Caput, da Lei 8.666\/93&#x27;,
+        &#x27;Objeto: Prestacao de servicos relativos ao rece bimento e\/ou coleta, transporte, distribuicao e  comprovacao das entregas, em !mbito nacional, de encomendas relativas aos Programas do Livro. &#x27;,
+        &#x27;Ordenador de Despesas e Presidente do FNDE&#x27;,
+        &#x27;DANIEL SILVA BALABAN&#x27;,
+        830748736.0
+      ],
+      [
+        &#x27;2016-03-18&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XXXIV da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Contratacao de Fundacao de apoio ao Instituto Butantan.&#x27;,
+        &#x27;Objeto: Vacina Humana, antigripal, aquosa, 0,50  ml, injetavel. &#x27;,
+        &#x27;Coordenador-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para a Saode&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        778680000.0
+      ],
+      [
+        &#x27;2008-12-31&#x27;,
+        &#x27;RECEITA FEDERAL DO BRASIL&#x27;,
+        &#x27;MF-SRF-SECRETARIA DA RECEITA FEDERAL\/DF&#x27;,
+        &#x27;Fundamento Legal: Artigo 24, inciso XVI, da Lei8.666\/93&#x27;,
+        &#x27;Justificativa: SERPRO e integrante da Administracao Poblica, criado para prestar ao Ministerio da os servicos que serao contratados.&#x27;,
+        &#x27;Objeto: Prestacao de servicos de tratamento de dados, redes de longa dist!ncia e locais, manut encao e desenvolvimento de sistema de dados, e servicos especiais, por intermedio de computaca o eletrenica para a RFB. &#x27;,
+        &#x27;Coordenador-Geral de ProgramaSSY&#x3D;o e Logstica&#x27;,
+        &#x27;ANToNIO MuRCIO DE OLIVEIRA AGUIAR&#x27;,
+        745670597.0
+      ],
+      [
+        &#x27;2010-08-02&#x27;,
+        &#x27;DEPARTAMENTO DE POLICIA FEDERAL\/MJ&#x27;,
+        &#x27;PRO-AMAZONIA\/PROMOTEC - DPF&#x27;,
+        &#x27;Fundamento Legal: Artigo 24, inciso XIV, da    Lei 8.666\/93&#x27;,
+        &#x27;Justificativa: Para atender as necessidades da CPLAM\/DLOG\/DPF.a&#x27;,
+        &#x27;Objeto: Contratacao da Societe Francaise dexpo rtation de materiels, Systemes et Services Rele vant des Ministeres de i\&#x27;interieru - SOFREMI vi sando ao fornecimento e PS implatacao dos sistem as, equipamentos , materiais e servicos que com poem o Projeto Pri- amazonia\/Promotec II. &#x27;,
+        &#x27;Diretor Geral do DPF&#x27;,
+        &#x27;LUIZ FERNANDO CORREA&#x27;,
+        721860000.0
+      ],
+      [
+        &#x27;2013-05-24&#x27;,
+        &#x27;MINISTERIO DO TURISMO&#x27;,
+        &#x27;COORDENACAO-GERAL DE RECURSOS LOGISTICOS&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Inciso II da Lei no 8.666 de 21\/06\/1993 combinado com o art. 13o, Inciso IV da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Para atender PSs necessidades do Ministerio do Turismo.&#x27;,
+        &#x27;Objeto: Prestacao de servicos pela CONTRATADA, na operacionalizacao de projetos de infraestrut ura turstica apoiados pelo  Programa de Aceler acao do Crescimento   PAC,  enquadrados na Acao   Apoio a Projetos de Infraestrutura Turstica , gerida pela CONTRATANTE, lastreado com recurs os consignados no Orcamento Geral da Uniao, a t tulo de transferancia obrigatiria, na forma do  disposto em instrumentos a serem editados pela  CONTRATANTE. &#x27;,
+        &#x27;Diretor de GestY&#x3D;o Inerna&#x27;,
+        &#x27;RUBENS PORTUGAL BACELLAR&#x27;,
+        697000000.0
+      ],
+      [
+        &#x27;2013-05-24&#x27;,
+        &#x27;MINISTERIO DO TURISMO&#x27;,
+        &#x27;COORDENACAO-GERAL DE RECURSOS LOGISTICOS&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso VIII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Atender as necessidades do MTur&#x27;,
+        &#x27;Objeto: Contratacao de empresa para a prestacao  de servicos pela contratada, na operacionaliza cao de projetos de infraestrutura turstica apo iados pelo Programa de Aceleracao do Cresciment o - PAC, enquadrados na Acao  Apoio a Projetos de Infraestrutura Turstica , gerida pelo Contr atante, lastreado com recursos consignados no O rcamento Geral da Uniao, a ttulo de transferan cia obrigatiria, na forma do disposto em instru mentos a serem editados pelo Contratante. &#x27;,
+        &#x27;Diretor de GestY&#x3D;o Interna&#x27;,
+        &#x27;RUBENS PORTUGAL BACELLAR&#x27;,
+        680000000.0
+      ],
+      [
+        &#x27;2015-07-23&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Inciso I da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: GILEAD SCIENCES FARMAC 1\/4 UTICA DO BRASIL LTDA detem a exclusividade do produto em todo o territirio nacional do medicamento.&#x27;,
+        &#x27;Objeto: Aquisicao de 2.684.304 comprimidos de S OFOSBUVIR 400mg. &#x27;,
+        &#x27;Coordenador-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        678904773.0
+      ],
+      [
+        &#x27;2017-12-07&#x27;,
+        &#x27;MINISTERIO DA CIENCIA,TECNOLOGIA E INOVACAO&#x27;,
+        &#x27;MCT-COORD. GERAL DE RECURSOS LOGISTICOS\/DF&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Inviabilidade de competicao.&#x27;,
+        &#x27;Objeto: Contratacao direta da Telecomunicacies Brasileiras S. A.   TELEBRAS para prestar os se rvicos em regime continuado de transmissao bidi recional de dados, em !mbito nacional, para o P rograma Governo Eletrenico   Servico de Atendim ento ao Cidadao - Gesac, por um perodo de 60 ( sessenta) meses. &#x27;,
+        &#x27;Diretor de InclusY&#x3D;o Digital&#x27;,
+        &#x27;AMERICO TRISTAO BERNARDES&#x27;,
+        663575000.0
+      ],
+      [
+        &#x27;2014-04-28&#x27;,
+        &#x27;COMANDO DA AERONAUTICA&#x27;,
+        &#x27;MAER-GAPBR-GRUPAMENTO DE APOIO DE BRASILIA\/DF&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Dotar a Forca Aerea Brasileira com uma aeronave de inspecao em voo com capacidade de homologar os auxlios PS navegacao&#x27;,
+        &#x27;Objeto: Aquisicao de 6 aeronaves de Inspecao em  Voo &#x27;,
+        &#x27;Ordenador Despesa Copac&#x27;,
+        &#x27;JOSE AUGUSTO CREPALDI AFFONSO&#x27;,
+        662261166.0
+      ],
+      [
+        &#x27;2012-04-13&#x27;,
+        &#x27;FUNDO DE AMPARO AO TRABALHADOR&#x27;,
+        &#x27;COORDENACAO-GERAL DE LOGIST. E ADMINIST.\/MTE&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XVI da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Em atendimento ao Parecer Conjur no 56\/2012, fls. 151 a 156 dos autos.&#x27;,
+        &#x27;Objeto: Contratacao de servicos especializados de Tecnologia da Informacao para atender aos pr ogramas da Secretaria de Polticas Poblicas de Emprego, conforme Projeto Basico fls. 78 a 116, com vigancia de 60 meses. &#x27;,
+        &#x27;Subsecret$?rio de Planejamento, OrSSamento e AdministraSSY&#x3D;o&#x27;,
+        &#x27;ANTONIO FERNANDO DECNOP MARTINS&#x27;,
+        656891708.0
+      ],
+      [
+        &#x27;2016-07-07&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XXXII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Contratacao em que ha transferancia de tecnologia de produtos estrategicos no !mbito da Fundacao Ezequiel Dias.&#x27;,
+        &#x27;Objeto: Vacina Humana Meningocicica conjugada g rupo C - Solucao Injetavel. &#x27;,
+        &#x27;Coordenador-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        656550000.0
+      ],
+      [
+        &#x27;2015-12-15&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Inciso I da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: A empresa Abbvie Farmacautica LTDA detem a exclusividade do produto HUMIRA  em todo territirio nacional.&#x27;,
+        &#x27;Objeto: Trata-se de aquisicao de 819.780 sering as de Adalimumabe, 40mg, injetavel &#x27;,
+        &#x27;Coordenador-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        636223060.0
+      ],
+      [
+        &#x27;2014-11-05&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Inciso I da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: A empresa ABBVIE FARMAC 1\/4 UTICA LTDA, detem a exclusividade, em todo o territirio nacional, do medicamento.&#x27;,
+        &#x27;Objeto: Aquisicao de 769.746 seringas do medica mento Adalimumabe 40mg,solucao injetavel. &#x27;,
+        &#x27;Coordenador-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        628836297.0
+      ],
+      [
+        &#x27;2016-09-05&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Inciso I da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: A empresa ABBVIE FARMAC 1\/4 UTICA  LTDA., detem a exclusividade do produto Humirax, em todo o territirio nacional.&#x27;,
+        &#x27;Objeto: Seringas de Adalimumabe 40mg, Solucao I njetavel. &#x27;,
+        &#x27;Coordenador-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        621880336.0
+      ],
+      [
+        &#x27;2018-01-16&#x27;,
+        &#x27;INSTITUTO NACIONAL DO SEGURO SOCIAL&#x27;,
+        &#x27;COORDENACAO GERAL DE LICITACOES E CONTRATOS&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XVI da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Art. 24o, Inciso XVI da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Objeto: Prestacao de servicos estrategicos, com uns e exclusivos de solucao de tecnologia da in formacao (TI), visando atender PSs necessidades do INSS. &#x27;,
+        &#x27;Diretor de OrSSamento FinanSSas e Logstica&#x27;,
+        &#x27;JOSE ORLANDO RIBEIRO CARDOSO&#x27;,
+        620632273.0
+      ],
+      [
+        &#x27;2018-05-23&#x27;,
+        &#x27;INSTITUTO NACIONAL DO SEGURO SOCIAL&#x27;,
+        &#x27;COORDENACAO GERAL DE LICITACOES E CONTRATOS&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XVI da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Art. 24o, Inciso XVI da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Objeto: Prestacao de servicos estrategicos, com uns e exclusivos de solucao de tecnologia da in formacao (TI), visando atender PSs necessidades do INSS &#x27;,
+        &#x27;Diretora de OrSSamento, FinanSSas e Logstica - Substituta&#x27;,
+        &#x27;GILVANEIRE CAVALCANTI BELTRAO&#x27;,
+        620632273.0
+      ],
+      [
+        &#x27;2016-01-21&#x27;,
+        &#x27;EMPRESAS DE ENERGIA&#x27;,
+        &#x27;AMAZONAS GERACAO E TRANSMISSAO DE ENERGIA S.A&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso IV da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Atendimento a Portaria no 15\/2016, de 20\/01\/2016, oriunda do Ministerio de Minas e Energia - MME&#x27;,
+        &#x27;Objeto: Prestacao de servicos de locacao de gru pos geradores no montante de 135MW, para o aten dimento a Portaria no 15\/2016, de 20\/01\/2016, o riunda do Ministerio de Minas e Energia - MME &#x27;,
+        &#x27;Diretor de OperaSSY&#x3D;o&#x27;,
+        &#x27;WADY CHARONE JUNIOR&#x27;,
+        611555025.0
+      ],
+      [
+        &#x27;2015-03-02&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso VIII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Butantan e uma Instituicao Poblica Estadual, subordinada PS Coord. dos Instit. de Pesq. da Sec.  Est. da Saode de SP.&#x27;,
+        &#x27;Objeto: Aquisicao de 54.000.000 doses de VACINA  HUMANA, ANTIGRIPAL, AQUOSA, 0,50 ML, INJETuVEL ; 2.500.000 de doses de VACINA HUMANA, CONTRA R AIVA EM C&gt;&gt;LULAS VERO, DOSE IMUNIZANTE 0,5 ML, P O LIOFILO P\/ INJETuVEL + DILUENTE e 20.500.000 doses de VACINA HUMANA, CONTRA V?RUS DA HEPATIT E B, RECOMBINANTE, 10 MCG\/ML, SUSPENSPO INJETuV EL. &#x27;,
+        &#x27;Coordenador-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        599795000.0
+      ],
+      [
+        &#x27;2018-12-19&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Inciso I da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Contratacao direta frente PS inviabilidade de competicao do objeto contratado&#x27;,
+        &#x27;Objeto: Aquisicao de ADALIMUMABE de 40mg, na ap resentacao de seringa preenchida e frasco-ampol a. &#x27;,
+        &#x27;Coordenador Geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        598724698.0
+      ],
+      [
+        &#x27;2013-12-26&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Inciso I da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Abbott Laboratirios do Brasil Ltda e fabricante e distribuidora exclusiva, em todo o territirio nacional, do medicamento.&#x27;,
+        &#x27;Objeto: Aquisicao de 680.000 seringas preenchid as de Adalimumabe 40mg &#x27;,
+        &#x27;Coordenadora Geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode - Substituta&#x27;,
+        &#x27;MICHELLE WERNECK DE OLIVEIRA&#x27;,
+        597978400.0
+      ],
+      [
+        &#x27;2016-07-21&#x27;,
+        &#x27;INST.NACIONAL DE EST.E PESQUISAS EDUCACIONAIS&#x27;,
+        &#x27;MEC\/INEP\/INST.NAC.DE EST.E PESQ.EDUCAC.\/DF&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XIII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: inciso XIII, art. 24 da lei 8.666\/93.&#x27;,
+        &#x27;Objeto: Contratacao do Consircio Cesgranrio-Ceb raspe para prestacao de servicos especializados  de aplicacao para o Exame Nacional do Ensino M edio - ENEM, conforme condicies e especificacie s contidas no Projeto Basico. &#x27;,
+        &#x27;Diretora de GestY&#x3D;o e Planejamento&#x27;,
+        &#x27;EUNICE DE OLIVEIRA FERREIRA SANTOS&#x27;,
+        596860059.0
+      ],
+      [
+        &#x27;2018-04-10&#x27;,
+        &#x27;MINISTERIO DAS CIDADES&#x27;,
+        &#x27;COORDENAcaO GERAL DE RECURSOS LOGISTICOS MCID&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993&#x27;,
+        &#x27;Justificativa: Inexigvel a licitacao quando houver a inviabilidade de competicao&#x27;,
+        &#x27;Objeto: Contratacao da Caixa Econemica Federal -  CAIXA, que tem por objeto os servicos para g estao operacional de contratos de repasse para execucao de programas geridos pela uniao, lastr eados com recursos consignados no Orcamento-Ger al da uniao para transferancias voluntarias, co nforme regras e diretrizes definidas na Instruc ao Normativa no 2\/2018, do Ministerio do Planej amento Desenvolvimento e Gestao &#x27;,
+        &#x27;Coordenador Geral de Recursos Logsticos&#x27;,
+        &#x27;DANIEL FEITOSA BARBOSA&#x27;,
+        592967356.0
+      ],
+      [
+        &#x27;2017-11-20&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Inciso I da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Contratacao direta frente PS inviabilidade de competicao do objeto contratado.&#x27;,
+        &#x27;Objeto: Aquisicao de ADALIMUMABE 40MG, SOLU,PO INJETuVEL. &#x27;,
+        &#x27;Coordenador Geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        589987600.0
+      ],
+      [
+        &#x27;2007-12-28&#x27;,
+        &#x27;RECEITA FEDERAL DO BRASIL&#x27;,
+        &#x27;MF-SRF-SECRETARIA DA RECEITA FEDERAL\/DF&#x27;,
+        &#x27;Fundamento Legal: Artigo 24, inciso XVI, da Lei8.666\/93&#x27;,
+        &#x27;Justificativa: SERPRO e integrante da Adm. Poblica, criado para prestar, aos irgaos do Min. Fazenda os servicos que serao contratados.&#x27;,
+        &#x27;Objeto: Prestacao de servicos de tratamento de dados, redes de longa dist!ncia e locais, manut encao e desenvolvimento de sistemas de dados, e  servicos especiais, por intermedio de computac ao eletrenica. &#x27;,
+        &#x27;Coordenador-Geral de ProgramaSSY&#x3D;o e Logstica&#x27;,
+        &#x27;ANToNIO MuRCIO DE OLIVEIRA AGUIAR&#x27;,
+        589660719.0
+      ],
+      [
+        &#x27;2018-11-28&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XXXII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Por se tratar de Transferancia de Tecnologia de produto estrategico para o SUS&#x27;,
+        &#x27;Objeto: Aquisicao de VACINA HUMANA, MENINGOCOCI CA CONJUGADA GRUPO \&#x27;C\&#x27;,SUSPENSPO INJETuVEL &#x27;,
+        &#x27;Coordenador-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        572850000.0
+      ],
+      [
+        &#x27;2012-11-16&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Inciso I da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: A Abbott Laboratirios do Brasil Ltda possui exclusividade para a producao e comercializacao do medicamento no Brasil.&#x27;,
+        &#x27;Objeto: Trata-se da aquisicao de 551.536 sering as de Adalimumabe 40mg. &#x27;,
+        &#x27;Coordenadora-geral de An$?lise Das ContataSSies de Insumos Estrat(c)gicos para Saode - Cgies&#x27;,
+        &#x27;MARIANA NOGUEIRA DE RESENDE SOUSA&#x27;,
+        570597084.0
+      ],
+      [
+        &#x27;2010-12-16&#x27;,
+        &#x27;INSTITUTO NACIONAL DO SEGURO SOCIAL&#x27;,
+        &#x27;COORDENACAO GERAL DE LICITACOES E CONTRATOS&#x27;,
+        &#x27;Fundamento Legal: Artigo 24, inciso XVI, da    Lei 8.666\/93&#x27;,
+        &#x27;Justificativa: Para atender demanda do INSS&#x27;,
+        &#x27;Objeto: Contratacao com a Dataprev, com vigenci a de 12 meses, para prestacao de servicos de te cnologia e informacies, em !mbito nacional, par a o INSS. &#x27;,
+        &#x27;Diretor de OrSSamento, FinanSSas e Logstica&#x27;,
+        &#x27;GUILHERME FERNANDO SCANDELAI&#x27;,
+        570096528.0
+      ],
+      [
+        &#x27;2018-08-15&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XXXII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Dispensada a licitacao por se tratar de fundacao de apoio PS irgao da administracao poblica direta&#x27;,
+        &#x27;Objeto: Aquisicao de VACINA HUMANA, ANTI-HPV (P APILOMA V?RUS), TETRAVALENTE, MONODOSE, SUSPENS PO INJETuVEL &#x27;,
+        &#x27;Coordenador Geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        567420000.0
+      ],
+      [
+        &#x27;2018-01-31&#x27;,
+        &#x27;MINISTeRIO DO TRABALHO E PREVIDeNCIA SOCIAL&#x27;,
+        &#x27;COORDENAcaO GERAL DE REC. LOGiSTICOS - MTPS&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Objeto: Contratacao da Caixa Econemica Federal para servicos de habilitacao e identificacao do s trabalhadores com direito ao Abono Salarial,  participantes do Programa de Integracao Social    PIS; o pagamento do Abono Salarial aos empre gados do Setor Privado com direito ao benefcio ; a apuracao e o controle dos valores, processa mento dos dados, atendimento aos trabalhadores,  bem como a disponibilizacao do acesso PS inform acies cadastrais, inerentes ao Abono Salarial. &#x27;,
+        &#x27;Soad Substituto&#x27;,
+        &#x27;HELIO FRANCISCO DE MIRANDA&#x27;,
+        545481975.0
+      ],
+      [
+        &#x27;2012-01-31&#x27;,
+        &#x27;COMANDO DO EXERCITO&#x27;,
+        &#x27;HOSPITAL MILITAR DE AREA DE BRASILIA&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Singularidade do objeto e inviabilidade de competicao.&#x27;,
+        &#x27;Objeto: Contratacao de servicos especializados de natureza contnua na area Saode para o atend imento Domiciliar, Ambulatorial e Medico-Hospit alar aos beneficiarios do FUSEx e aos Servidore s Civis do Exercito Brasileiro. &#x27;,
+        &#x27;Ordenador de Despesas do Hmab&#x27;,
+        &#x27;PAULO SERGIO IGLESSIAS&#x27;,
+        540600000.0
+      ],
+      [
+        &#x27;2017-07-12&#x27;,
+        &#x27;INST.NACIONAL DE EST.E PESQUISAS EDUCACIONAIS&#x27;,
+        &#x27;MEC\/INEP\/INST.NAC.DE EST.E PESQ.EDUCAC.\/DF&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XIII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Acirdao 2139\/2014 - TCU&#x27;,
+        &#x27;Objeto: Contratacao do Consircio CESGRANRIO\/FGV \/VUNESP para prestacao de servicos especializad os de aplicacao para o Exame Nacional do Ensino  Medio   Enem, conforme condicies e especificac ies contidas no Projeto Basico. &#x27;,
+        &#x27;Diretora de GestY&#x3D;o e Planejamento&#x27;,
+        &#x27;EUNICE DE OLIVEIRA FERREIRA SANTOS&#x27;,
+        525190375.0
+      ],
+      [
+        &#x27;2011-12-16&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Inciso I da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: A empresa Abbott Laboratirios do Brasil Ltda e fabricante e distribuidora exclusiva em todo territirio nacional.&#x27;,
+        &#x27;Objeto: Trata-se da aquisicao de 430.000 sering as-preenchidas do medicamento Adalimumabe 40mg solucao injetavel. &#x27;,
+        &#x27;Coordenadora-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode - Cgies&#x27;,
+        &#x27;GISELIA FERREIRA&#x27;,
+        523365900.0
+      ],
+      [
+        &#x27;2008-03-06&#x27;,
+        &#x27;MINISTERIO DA JUSTICA&#x27;,
+        &#x27;SECRETARIA NACIONAL DE SEGURANCA PUBLICA&#x27;,
+        &#x27;Fundamento Legal: Artigo 24, inciso VIII, da   Lei 8.666\/93&#x27;,
+        &#x27;Justificativa: Conforme memorando no 280\/08\/gab\/mj.&#x27;,
+        &#x27;Objeto: Contratacao de instituicao especializa- da para a realizacao da prestacao de servicos tecnicos com vistas a implementacao do PROGRA- MA BOLSA FORMACAO mediante a emissao do cartao PRONASCI e processo de pagamento aos beneficia- rios por meio de transferencia direta de valo- res com vistas a beneficiar 200.000 profissio- nais\/ano. &#x27;,
+        &#x27;Coordenadora Geral de Ensino&#x27;,
+        &#x27;JULIANA MARCIA BARROSO&#x27;,
+        511187400.0
+      ],
+      [
+        &#x27;2008-03-07&#x27;,
+        &#x27;MINISTERIO DA JUSTICA&#x27;,
+        &#x27;SECRETARIA NACIONAL DE SEGURANCA PUBLICA&#x27;,
+        &#x27;Fundamento Legal: Artigo 24, inciso VIII, da   Lei 8.666\/93&#x27;,
+        &#x27;Justificativa: Memorando 280\/08-GAB\/MJ.&#x27;,
+        &#x27;Objeto: Constratacao de instituicao especializa da para realizacao da prestacao de servicos tec nicos com vistas a implementacao do Programa Bo lsa Formacao mediante a emissa do cartao PRONAS CI e o processo de pagamento aos beneficiarios por meio de transferencia direta de valore com vistas a beneficiar 200.000 profissionais\/ano. &#x27;,
+        &#x27;Coordenadora-Geral de Ensino&#x27;,
+        &#x27;JULIANA MARCIA BARROSO&#x27;,
+        511187400.0
+      ],
+      [
+        &#x27;2016-07-15&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Inciso I da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: A empresa GILEAD SCIENCES FARMAC 1\/4 UTICA DO BRASIL LTDA detem a exclusividade do produto, em todo territirio nacional.&#x27;,
+        &#x27;Objeto: Medicamento Sofosbuvir 400mg. &#x27;,
+        &#x27;Coordenador-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        510497419.0
+      ],
+      [
+        &#x27;2017-11-01&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XXXII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Dispensada a licitacao por se tratar de uma Transferancia de Tecnologia de produto estrategico para o SUS.&#x27;,
+        &#x27;Objeto: Aquisicao de VACINA HUMANA, MENINGOCOCI CA CONJUGADA GRUPO \&#x27;C\&#x27;. &#x27;,
+        &#x27;Coordenador Geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode - Substituta&#x27;,
+        &#x27;ADRIANA RODOVALHO BEZERRA&#x27;,
+        493050000.0
+      ],
+      [
+        &#x27;2014-09-08&#x27;,
+        &#x27;MINISTERIO DEFESA&#x27;,
+        &#x27;DEPARTAMENTO DE ADMINISTRACAO INTERNA&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso VIII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Confere PS TELEBRAS a atribuicao de concessionaria geral para exploracao dos servicos de telecomunicacies.&#x27;,
+        &#x27;Objeto: Cessao de direitos de uso futuro, inali enavel, irretratavel, exclusivo e irrestrito da  infraestrutura Satelital da Banda X, pela TELE BRAS ao MD &#x27;,
+        &#x27;Ordenador de Despesas&#x27;,
+        &#x27;RUI ALENCAR ANDRADE&#x27;,
+        489360000.0
+      ],
+      [
+        &#x27;2018-05-03&#x27;,
+        &#x27;MINISTERIO DA INTEGRACAO NACIONAL&#x27;,
+        &#x27;SECRETARIA DE INFRA-ESTRUTURA HIDRICA - SIH&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XI da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Contratacao de empresa remanescente do RDC Eletrenico N.o 07\/2016, Processo SEI n.o 59008.000891\/2016-42&#x27;,
+        &#x27;Objeto: Execucao das obras civis, fornecimento,  instalacao, montagem, testes e comissionamento  das obras complementares do Trecho I   Eixo No rte, do Projeto de Integracao do Rio Sao Franci sco com Bacias Hidrograficas do Nordeste Setent rional   PISF. &#x27;,
+        &#x27;Secretario de Infraestrutura Hdrica - Substituto&#x27;,
+        &#x27;MARCUS AURELIUS ARAGAO VERAS&#x27;,
+        485771461.0
+      ],
+      [
+        &#x27;2008-12-18&#x27;,
+        &#x27;INSTITUTO NACIONAL DO SEGURO SOCIAL&#x27;,
+        &#x27;COORDENACAO GERAL DE LICITACOES E CONTRATOS&#x27;,
+        &#x27;Fundamento Legal: Artigo 24, inciso XVI, da Lei8.666\/93&#x27;,
+        &#x27;Justificativa: Executar servicos de tecnologia e informacao.&#x27;,
+        &#x27;Objeto: Prestacao de servicos de Tecnologia e I nformacies. &#x27;,
+        &#x27;Diretor de OrSSamento, FinanSSas e Logstica.&#x27;,
+        &#x27;GUILHERME FERNANDO SCANDELAI&#x27;,
+        473821069.0
+      ],
+      [
+        &#x27;2016-02-12&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XXXII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Contratacao de insumos estrategicos para a saode com Parceria de Desenvolvimento Produtivo ? PDP.&#x27;,
+        &#x27;Objeto: Concentrado de Fator de Coagulacao, fat or VIII Recombinante, PO LIOFILO P\/ INJETuVEL. &#x27;,
+        &#x27;Coordenador-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        471500000.0
+      ],
+      [
+        &#x27;2016-01-15&#x27;,
+        &#x27;INSTITUTO NACIONAL DO SEGURO SOCIAL&#x27;,
+        &#x27;COORDENACAO GERAL DE LICITACOES E CONTRATOS&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XVI da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Enquadramento no Art. 24 Inciso XVI da Lei 8.666\/93&#x27;,
+        &#x27;Objeto: Contratacao da Empresa de Tecnologia da  Informacao da Previdancia Social - DATAPREV, p ara prestacao de servicos especializados em, su porte e manutencao de sistemas em producao, ela boracao, desenvolvimento, implantacao e sustent acao de projetos e sistemas com uso de Tecnolog ia da Informacao, servicos de comunicacao corpo rativa, apuracies e extracies de dados, consult oria, hosting, colocation e microfilmagem. &#x27;,
+        &#x27;Diretor de OrSSamento, FinanSSas e Logstica&#x27;,
+        &#x27;LENILSON QUEIROZ DE ARAUJO&#x27;,
+        469831028.0
+      ],
+      [
+        &#x27;2009-12-24&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Artigo 24, inciso IV, da Lei 8.666\/93&#x27;,
+        &#x27;Justificativa: Trata-se de aquisicao emergencial visto a pandemia da influenza do tipo a H1N1.&#x27;,
+        &#x27;Objeto: Aquisicao de 40.000.000 de doses de Vac ina Humana Influenza Tipo A H1N1, vacina para a dministracao por injecao intramuscular - frasco s com no mnimo 10 doses\/frasco. &#x27;,
+        &#x27;Diretor do Depratamento de Logstica&#x27;,
+        &#x27;VAGNER DE SOUZA LUCIANO&#x27;,
+        465532000.0
+      ],
+      [
+        &#x27;2015-06-05&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XXXII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Transferancia de tecnologia de produto estrategico para o Sistema thnico de Saode - SUS.&#x27;,
+        &#x27;Objeto: Aquisicao de 11.000.000(onze milhies) d e doses de Vacina Humana, Anti-HPV (Papiloma V rus), Tetravalente, Monodose, suspensao injetav el, seringa preenchida. &#x27;,
+        &#x27;Coordenador-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        465355000.0
+      ],
+      [
+        &#x27;2010-12-29&#x27;,
+        &#x27;COMANDO DO EXERCITO&#x27;,
+        &#x27;ESTADO-MAIOR DO EXERCITO-MEX\/DF&#x27;,
+        &#x27;Fundamento Legal: Artigo 24, inciso XXVIII, da Lei 8.666\/93&#x27;,
+        &#x27;Justificativa: Fornecimento de bens e servicos que envolvem, alta tecnologia e defesa nacionala serem produzidos ou prestads no pas.&#x27;,
+        &#x27;Objeto: Contratacao para aquisicao futura de 21 6 (duzentos e dezesseis) sistemas de armas - ca nhao 30 mm, UT 30BR, para serem integrados PSs v iaturas blindadas de transporte de pessoal, med ia de rodas (VBTP_MR)para atender PSs necessidad es de Organizacies Militares do Exercito Brasil iro. &#x27;,
+        &#x27;Ordenador de Despesas do EME&#x27;,
+        &#x27;CARLOS ALBERTO PASSARELA ARANTES- CEL&#x27;,
+        465168096.0
+      ],
+      [
+        &#x27;2010-03-30&#x27;,
+        &#x27;MINISTERIO DO DESENV. SOCIAL E COMBATE A FOME&#x27;,
+        &#x27;SECRETARIA NACIONAL DE RENDA E CIDADANIA&#x27;,
+        &#x27;Fundamento Legal: Artigo 25, inciso II, da Lei 8.666\/93&#x27;,
+        &#x27;Justificativa: Contratacao do agente operador  do Programa Bolsa Familia - conforme determina o art. 12 da Lei 10.836\/2004.&#x27;,
+        &#x27;Objeto: Prestacao de servicos para execucao  o- peracional de acies estabelecidas no contrato e no seu anexo, considerando a operacao do Cadas- tro thnico para Programas Sociais -  Cadonico  e operacao das acies de Transferencia de Renda do Governo Federal sob a Gestao do MDS. &#x27;,
+        &#x27;Secret$?ria Nacional de Renda de Cidadania&#x27;,
+        &#x27;LUCIA MARIA MODESTO PEREIRA&#x27;,
+        457000000.0
+      ],
+      [
+        &#x27;2018-02-21&#x27;,
+        &#x27;COMANDO DA AERONAUTICA&#x27;,
+        &#x27;CENTRO DE AQUISICOES ESPECIFICAS&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: &gt;&gt; a onica empresa no Brasil capacitada e certificada pelos Orgaos Oficiais Aeronauticos Brasileiros.&#x27;,
+        &#x27;Objeto: Suporte logstico contratado para todos  os modelos de aeronaves H225M (V\/H-36) das For cas Armadas Brasileira. &#x27;,
+        &#x27;Ordenador de Despesas do Gal&#x27;,
+        &#x27;MARCELO TENORIO DE CARVALHO&#x27;,
+        451683962.0
+      ],
+      [
+        &#x27;2015-01-20&#x27;,
+        &#x27;MINISTERIO DA FAZENDA&#x27;,
+        &#x27;MF-SRF-SECRETARIA DA RECEITA FEDERAL\/DF&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Inviabilidade de competicao&#x27;,
+        &#x27;Objeto: Prestacao de servicos continuados de ar recadacao de receitas federais, por meio do Doc umento de Arrecadacao de Receitas Federais (Dar f), do Documento do Simples Nacional (Das) e da  Guia da Previdancia Social (GPS). &#x27;,
+        &#x27;Coordenador-geral de ProgramaSSY&#x3D;o e Logstica&#x27;,
+        &#x27;NILTON COSTA SIMOES&#x27;,
+        448546375.0
+      ],
+      [
+        &#x27;2019-01-22&#x27;,
+        &#x27;FUNDACAO OSWALDO CRUZ&#x27;,
+        &#x27;INSTITUTO DE TECNOLOGIA EM IMUNOBIOLOGICOS&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XXXII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: O material e o onico que atende PSs necessidades da unidade&#x27;,
+        &#x27;Objeto: Importacao de vacina pneumo 10-valente &#x27;,
+        &#x27;Assessora da V.d. de Producao&#x27;,
+        &#x27;CARLA FRANCA WOLANSKI DE ALMEIDA&#x27;,
+        446327409.0
+      ],
+      [
+        &#x27;2016-12-23&#x27;,
+        &#x27;COMANDO DO EXERCITO&#x27;,
+        &#x27;COMANDO DA 4 REGIAO MILITAR\/DIV EX&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Por se tratar de profissionais credenciados pela associacao de classe a serem remuneradas pela tabela CBHPM com acresc 15%.&#x27;,
+        &#x27;Objeto: Credenciamento de Organizacies Civis de  Saode. &#x27;,
+        &#x27;Ordenador de Despesas&#x27;,
+        &#x27;MARCOS MOTA BASTOS&#x27;,
+        439800000.0
+      ],
+      [
+        &#x27;2018-03-05&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XXXII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Dispensada a licitacao por se tratar de uma Transferancia de Tecnologia de produto estrategico para o SUS&#x27;,
+        &#x27;Objeto: Aquisicao de CONCENTRADO DE FATOR DE CO AGULA,PO, FATOR VIII RECOMBINANTE, PO LIOFILO P \/ INJETuVEL &#x27;,
+        &#x27;Coordenador-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        427905000.0
+      ],
+      [
+        &#x27;2011-01-28&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Artigo 25, inciso I, da Lei  8.666\/93&#x27;,
+        &#x27;Justificativa: A empresa e fabricante e distribuidora exclusiva em todo o territirio nacional do produto HUMIRA.&#x27;,
+        &#x27;Objeto: Aquisicao de 290.000 seringas preenchid as do medicamento Adalimumabe 40 mg - solucao i njetavel. &#x27;,
+        &#x27;Coordenadora Geral de An$?lise das ContrataSSies de Insumos Estrat(c)gicos para Saode&#x27;,
+        &#x27;GISELIA FERREIRA&#x27;,
+        405710000.0
+      ],
+      [
+        &#x27;2008-12-18&#x27;,
+        &#x27;SERVICO FEDERAL DE PROCESSAMENTO DE DADOS&#x27;,
+        &#x27;SERPRO - SEDE BRASILIA&#x27;,
+        &#x27;Fundamento Legal: Artigo 25, Caput, da Lei     8.666\/93&#x27;,
+        &#x27;Justificativa: Fornecedor exclusivo.&#x27;,
+        &#x27;Objeto: Servicos de Assistencia medico-hospita- lar. &#x27;,
+        &#x27;Diretora&#x27;,
+        &#x27;VERA LthCIA DE MORAES&#x27;,
+        402936600.0
+      ],
+      [
+        &#x27;2017-03-07&#x27;,
+        &#x27;FUNDACAO OSWALDO CRUZ&#x27;,
+        &#x27;INSTITUTO DE TECNOLOGIA EM IMUNOBIOLOGICOS&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: O material e o onico que atende PSs necessidades da Unidade&#x27;,
+        &#x27;Objeto: Importacao de Vacina Pneumo 10-Valente &#x27;,
+        &#x27;Assessora da Vice-diretoria de Gestao e Mercado&#x27;,
+        &#x27;CINTIA NUNES CARDOSO LOPES&#x27;,
+        398849173.0
+      ],
+      [
+        &#x27;2016-04-25&#x27;,
+        &#x27;FUNDACAO OSWALDO CRUZ&#x27;,
+        &#x27;INSTITUTO DE TECNOLOGIA EM IMUNOBIOLOGICOS&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: O Material requisitado e o onico que em razao das suas caractersticas tecnica atende as necessidade do Departamento&#x27;,
+        &#x27;Objeto: Importacao de vacina pneumo 10-valente &#x27;,
+        &#x27;Substituta Eventual do Depad&#x27;,
+        &#x27;ANDREA GOOD LIMA COUTO&#x27;,
+        395333410.0
+      ],
+      [
+        &#x27;2014-02-26&#x27;,
+        &#x27;FUNDACAO OSWALDO CRUZ&#x27;,
+        &#x27;INSTITUTO DE TECNOLOGIA EM IMUNOBIOLOGICOS&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: O material solicitado e o onico que atende as necessidades da Unidade.&#x27;,
+        &#x27;Objeto: Importacao de Vacina Pneumocicica 10 Va lente - Conjugada. &#x27;,
+        &#x27;Substituta Eventual do Depad&#x27;,
+        &#x27;ANDREA GOOD LIMA COUTO&#x27;,
+        394683924.0
+      ],
+      [
+        &#x27;2015-03-19&#x27;,
+        &#x27;FUNDACAO OSWALDO CRUZ&#x27;,
+        &#x27;INSTITUTO DE TECNOLOGIA EM IMUNOBIOLOGICOS&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: O material solicitado e o onico que atende as necessidades da Unidade.&#x27;,
+        &#x27;Objeto: Importacao de Vacina Pneumocicica 10-Va lente. &#x27;,
+        &#x27;Substituta Eventual do Depad&#x27;,
+        &#x27;ANDREA GOOD LIMA COUTO&#x27;,
+        394653123.0
+      ],
+      [
+        &#x27;2017-02-23&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XXXII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Trata-se de contratacao de insumos estrategicos para a saode referente ao 4o ano de Parceria de Desenvolvimento Produtivo&#x27;,
+        &#x27;Objeto: Aquisicao de Concentrado de Fator de Co agulacao - Fator VIII Recombinante. &#x27;,
+        &#x27;Coordenador-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode.&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        394437350.0
+      ],
+      [
+        &#x27;2008-11-20&#x27;,
+        &#x27;MINISTERIO DO DESENVOLVIMENTO AGRARIO&#x27;,
+        &#x27;MINISTERIO DO DESENVOLVIMENTO AGRARIO&#x27;,
+        &#x27;Fundamento Legal: Artigo 24, inciso VIII, da   Lei 8.666\/93&#x27;,
+        &#x27;Justificativa: necessidade das Secretarias do MDA para operar os programas de governo.&#x27;,
+        &#x27;Objeto: Contratacao da Caixa Econemica Federal - CEF para operar como agente financeiro do pro grama de credito fundiario. &#x27;,
+        &#x27;Secret$?rio de Reordenamento Agr$?rio&#x27;,
+        &#x27;ADHEMAR LOPES DE ALMEIDA&#x27;,
+        385854007.0
+      ],
+      [
+        &#x27;2008-12-01&#x27;,
+        &#x27;MINISTERIO DO DESENVOLVIMENTO AGRARIO&#x27;,
+        &#x27;MINISTERIO DO DESENVOLVIMENTO AGRARIO&#x27;,
+        &#x27;Fundamento Legal: Artigo 24, inciso VIII, da   Lei 8.666\/93&#x27;,
+        &#x27;Justificativa: operacionalizacao do Programa Nacional de Credito Fundiario - PNFC&#x27;,
+        &#x27;Objeto: Contratacao do Banco do Nordeste do Bra sil S.A., para repasse e gestao de recursos fin anceiros destinados aos Subprojetos de Aquisica o de Terras - SAT e Subprojetos de Investimento s Basicos - SIB, referentes ao Projeto de Credi to Fundiario e Combate PS Pobreza Rural, bem com o autorizar o Banco do Nordeste do Brasil S.A. a administrar os recursos financeiros destinado s PS realizacao do projeto. &#x27;,
+        &#x27;Subsecret$?rio de Reordenamento Agr$?rio&#x27;,
+        &#x27;ADHEMAR LOPES DE ALMEIDA&#x27;,
+        385854007.0
+      ],
+      [
+        &#x27;2008-12-24&#x27;,
+        &#x27;MINISTERIO DO DESENVOLVIMENTO AGRARIO&#x27;,
+        &#x27;MINISTERIO DO DESENVOLVIMENTO AGRARIO&#x27;,
+        &#x27;Fundamento Legal: Artigo 24, inciso VIII, da   Lei 8.666\/93&#x27;,
+        &#x27;Justificativa: Aplicacao de recursos nas atividades-fim do MDA.&#x27;,
+        &#x27;Objeto: Celebracao de Contrato que entre si cel ebram a Uniao Federal, por meio do MDA e o Banc o do Brasil S.A., para gestao e aplicacao dos r ecursos financeiros destinados PS concessao de f inanciamento para aquisicao de imiveis rurais d iretamente pelos trabalhadores rurais, referent es aos recursos do Fundo de Terras e da Reforma  Agraria, objeto da Lei Complementar no 93, de 04 de fevereiro de 1998. &#x27;,
+        &#x27;Secret$?rio de Reordenamento Agr$?rio&#x27;,
+        &#x27;ADHEMAR LOPES DE ALMEIDA&#x27;,
+        385854007.0
+      ],
+      [
+        &#x27;2012-10-05&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Inciso I da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Wyeth Ind Farm Ltda e fabricante e distribuidora exclusiva em todo territirio nacional do referido medicamento.&#x27;,
+        &#x27;Objeto: Aquisicao de 152.388 frascos-ampolas de  Etanercepte 25mg e 704.496 seringas-preenchida s de Etanercepte 50mg. &#x27;,
+        &#x27;Coordenadora-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode - Substituta&#x27;,
+        &#x27;MARIANA NOGUEIRA DE RESENDE SOUSA&#x27;,
+        384724032.0
+      ],
+      [
+        &#x27;2016-07-12&#x27;,
+        &#x27;FUNDO NACIONAL DE DESENVOLVIMENTO DA EDUCACAO&#x27;,
+        &#x27;FUNDO FINANC. ESTUDANTE DE ENSINO SUPERIOR&#x27;,
+        &#x27;Fundamento Legal: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Art. 25o, Caput da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Objeto: Contratacao de agente financeiro  para prestar servicos ao Fundo de Financiamento Estu dantil (FIES), relativos aos contratos de finan ciamento do FIES formalizados apis 14 de janeir o de 2010. &#x27;,
+        &#x27;Diretor&#x27;,
+        &#x27;ANTONIO CORREA NETO&#x27;,
+        382000000.0
+      ],
+      [
+        &#x27;2017-12-06&#x27;,
+        &#x27;FUNDACAO OSWALDO CRUZ&#x27;,
+        &#x27;INSTITUTO DE TECNOLOGIA EM IMUNOBIOLOGICOS&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XXXII da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: O material e o onico que atende as necessidades da Unidade&#x27;,
+        &#x27;Objeto: Aquisicao de Vacina Pneumocicica &#x27;,
+        &#x27;Assessor da Vgest&#x27;,
+        &#x27;ARMANDO JOSE DE AGUIAR PIRES&#x27;,
+        379030104.0
+      ],
+      [
+        &#x27;2016-01-18&#x27;,
+        &#x27;MINISTERIO DA SAUDE&#x27;,
+        &#x27;DEPARTAMENTO DE LOGISTICA EM SAUDE&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso IV da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Trata-se de Acao Judicial&#x27;,
+        &#x27;Objeto: Aquisicao de 14217fra SOLIRIS 300MG &#x27;,
+        &#x27;Coordenador-geral de An$?lise Das ContrataSSies de Insumos Estrat(c)gicos para Saode&#x27;,
+        &#x27;EDUARDO SEARA MACHADO POJO DO REGO&#x27;,
+        376573198.0
+      ],
+      [
+        &#x27;2009-12-21&#x27;,
+        &#x27;COMANDO DO EXERCITO&#x27;,
+        &#x27;COMANDO LOGISTICO&#x27;,
+        &#x27;Fundamento Legal: Artigo 25, inciso I, da Lei  8.666\/93&#x27;,
+        &#x27;Justificativa: Fornecedor exclusivo&#x27;,
+        &#x27;Objeto: Reconstrucao\/modernizacao  de 34 (trint a e quatro) helicipteros  AS 356 K-Pantera, da Aviacao do Exercito &#x27;,
+        &#x27;Ordenador de Despesas do Comando Logstico&#x27;,
+        &#x27;ROBSON NOVAES HUREN - CEL&#x27;,
+        375803725.0
+      ],
+      [
+        &#x27;2004-02-12&#x27;,
+        &#x27;INSTITUTO NACIONAL DO SEGURO SOCIAL&#x27;,
+        &#x27;COORDENACAO GERAL DE LICITACOES E CONTRATOS&#x27;,
+        &#x27;Fundamento Legal: Artigo 24 ,inciso XVI ,da Lei8.666\/93&#x27;,
+        &#x27;Justificativa: Atendimento Memo\/397\/CGTI\/INSS\/2003&#x27;,
+        &#x27;Objeto: Contratacao de prestacao de servicos - DATAPREV &#x27;,
+        &#x27;Diretor de OrSSamento, FinanSSas e Logstica&#x27;,
+        &#x27;JOPO 2NGELO LOURES&#x27;,
+        374221013.0
+      ],
+      [
+        &#x27;2011-08-09&#x27;,
+        &#x27;INST.NACIONAL DE EST.E PESQUISAS EDUCACIONAIS&#x27;,
+        &#x27;MEC\/INEP\/INST.NAC.DE EST.E PESQ.EDUCAC.\/DF&#x27;,
+        &#x27;Fundamento Legal: Artigo 24, inciso XIII, da   Lei 8.666\/93&#x27;,
+        &#x27;Justificativa: Realizar o Exame Nacional do Ensino Medio.&#x27;,
+        &#x27;Objeto: Prestacao de servicos especializados pa ra a aplicacao do Exame Nacional do Ensino Medi o - podendo ocorrer duas ou mais edicies em cad a 12 (doze) meses, conforme condicies e especif icacies contidas no Projeto Basico. &#x27;,
+        &#x27;Ordenador de Despesa&#x27;,
+        &#x27;DENIO MENEZES DA SILVA&#x27;,
+        372479758.0
+      ],
+      [
+        &#x27;2017-02-02&#x27;,
+        &#x27;PRESIDENCIA DA REPUBLICA&#x27;,
+        &#x27;SECRETARIA DE PORTOS&#x27;,
+        &#x27;Fundamento Legal: Art. 24o, Inciso XI da Lei no 8.666 de 21\/06\/1993.&#x27;,
+        &#x27;Justificativa: Contratacao de obra remanescente.&#x27;,
+        &#x27;Objeto: Contratacao do Consircio Van Oord\/Boska lis para Elaboracao dos Projetos Basico e Execu tivo de Dragagem e Execucao das Obras de Dragag em por Resultado para Readequacao da Geometria do Canal de Acesso Aquaviario e dos Bercos de A costagem do Complexo Portuario de Santos-SP e d emais servicos e operacies necessarias e sufici entes PS entrega das obras, conforme o Anteproje to de Dragagem e especificacies do Termo de Ref erancia. &#x27;,
+        &#x27;Secret$?rio de Infraestrutura Portu$?ria&#x27;,
+        &#x27;DANIEL MACIEL DE MENEZES SILVA&#x27;,
+        369091000.0
+      ],
+      [
+        &#x27;2011-06-27&#x27;,
+        &#x27;INSTITUTO NACIONAL DO SEGURO SOCIAL&#x27;,
+        &#x27;COORDENACAO GERAL DE LICITACOES E CONTRATOS&#x27;,
+        &#x27;Fundamento Legal: Artigo 25, Caput, da Lei     8.666\/93&#x27;,
+        &#x27;Justificativa: Para atender demanda da Diretoria de Benefcios.&#x27;,
+        &#x27;Objeto: Contratacao de instituicao bancaria, cu jo objeto e a prestacao de_servicos de pgto de benefcios administrados pelo INSS, com viganci a de 240 meses, considerando que os valores ser ao repassados do Contratado para o Contratante,  salientando que o valor global e estimado. &#x27;,
+        &#x27;Diretor de OrSSamento, FinanSSas e Logstica&#x27;,
+        &#x27;PEDRO AUGUSTO SANGUINETTI FERREIRA&#x27;,
+        368716090.0
+      ],
+      [
+        &#x27;2002-06-28&#x27;,
+        &#x27;INSTITUTO NACIONAL DO SEGURO SOCIAL&#x27;,
+        &#x27;COORDENACAO GERAL DE LICITACOES E CONTRATOS&#x27;,
+        &#x27;Fundamento Legal: Artigo 24 , inciso VIII  , daLei 8.666\/93, atualizada.&#x27;,
+        &#x27;Justificativa: Atender ao Memorando No 405\/DOFL\/INSS, de 24.06.2002.&#x27;,
+        &#x27;Objeto: Contratacao de empresa especializada de servicos de Tecnologia e Informacies. &#x27;,
+        &#x27;Diretor de orSSamento, FinanSSas e Logstica&#x27;,
+        &#x27;ROBERTO LUIZ LOPES&#x27;,
+        366012238.0
+      ]
+    ]
+  }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/services/medianaGastosPredicaoData.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mediana_gastos_predicao"></a>
+                        <span class="name">
+                            <b>
+                            mediana_gastos_predicao</b>
+                            <a href="#mediana_gastos_predicao"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{&quot;data&quot;:[[&quot;2000-02-01&quot;,971.7237099923],[&quot;2000-03-01&quot;,973.7663914348],[&quot;2000-04-01&quot;,975.7818369484],[&quot;2000-05-01&quot;,977.8525311916],[&quot;2000-06-01&quot;,979.8956010001],[&quot;2000-07-01&quot;,981.9938153404],[&quot;2000-08-01&quot;,984.0644573494],[&quot;2000-09-01&quot;,986.1890370568],[&quot;2000-10-01&quot;,988.2866478584],[&quot;2000-11-01&quot;,990.4362660223],[&quot;2000-12-01&quot;,992.5598804599],[&quot;2001-01-01&quot;,994.7325370965],[&quot;2001-02-01&quot;,996.8806726039],[&quot;2001-03-01&quot;,999.0731765828],[&quot;2001-04-01&quot;,1001.2434963178],[&quot;2001-05-01&quot;,1003.4529835301],[&quot;2001-06-01&quot;,1005.6428870186],[&quot;2001-07-01&quot;,1007.8674850503],[&quot;2001-08-01&quot;,1010.0747358448],[&quot;2001-09-01&quot;,1012.3132534781],[&quot;2001-10-01&quot;,1014.5361377412],[&quot;2001-11-01&quot;,1016.787639759],[&quot;2001-12-01&quot;,1019.0248329601],[&quot;2002-01-01&quot;,1021.2875318067],[&quot;2002-02-01&quot;,1023.537477904],[&quot;2002-03-01&quot;,1025.8085319813],[&quot;2002-04-01&quot;,1028.0690321593],[&quot;2002-05-01&quot;,1030.3462993309],[&quot;2002-06-01&quot;,1032.6151831129],[&quot;2002-07-01&quot;,1034.8973966166],[&quot;2002-08-01&quot;,1037.1729453792],[&quot;2002-09-01&quot;,1039.4596457873],[&quot;2002-10-01&quot;,1041.7407704999],[&quot;2002-11-01&quot;,1044.0318935629],[&quot;2002-12-01&quot;,1046.3180175815],[&quot;2003-01-01&quot;,1048.6128288864],[&quot;2003-02-01&quot;,1050.9032966829],[&quot;2003-03-01&quot;,1053.2007300321],[&quot;2003-04-01&quot;,1055.4946807449],[&quot;2003-05-01&quot;,1057.7944373778],[&quot;2003-06-01&quot;,1060.0912911936],[&quot;2003-07-01&quot;,1062.3943171844],[&quot;2003-08-01&quot;,1064.6942572281],[&quot;2003-09-01&quot;,1067.0027399126],[&quot;2003-10-01&quot;,1069.3069514075],[&quot;2003-11-01&quot;,1071.624443329],[&quot;2003-12-01&quot;,1073.9352951504],[&quot;2004-01-01&quot;,1076.2657812384],[&quot;2004-02-01&quot;,1078.5864502836],[&quot;2004-03-01&quot;,1080.9342162321],[&quot;2004-04-01&quot;,1083.2684337935],[&quot;2004-05-01&quot;,1085.640087296],[&quot;2004-06-01&quot;,1087.9930228574],[&quot;2004-07-01&quot;,1090.3991695289],[&quot;2004-08-01&quot;,1092.7787106223],[&quot;2004-09-01&quot;,1095.2363508245],[&quot;2004-10-01&quot;,1097.6549413672],[&quot;2004-11-01&quot;,1100.1913953727],[&quot;2004-12-01&quot;,1102.6689174122],[&quot;2005-01-01&quot;,1105.3269003668],[&quot;2005-02-01&quot;,1107.8946524276],[&quot;2005-03-01&quot;,1110.7401535771],[&quot;2005-04-01&quot;,1113.4467794362],[&quot;2005-05-01&quot;,1116.5717239397],[&quot;2005-06-01&quot;,1119.4875079346],[&quot;2005-07-01&quot;,1123.5446706179],[&quot;2005-08-01&quot;,1127.031140443],[&quot;2005-09-01&quot;,1131.5366837663],[&quot;2005-10-01&quot;,1135.532687363],[&quot;2005-11-01&quot;,1139.8817753238],[&quot;2005-12-01&quot;,1144.0543203887],[&quot;2006-01-01&quot;,1148.5196565356],[&quot;2006-02-01&quot;,1152.8385966605],[&quot;2006-03-01&quot;,1157.3951160923],[&quot;2006-04-01&quot;,1161.8328455958],[&quot;2006-05-01&quot;,1166.4728454698],[&quot;2006-06-01&quot;,1171.0117100179],[&quot;2006-07-01&quot;,1175.728498856],[&quot;2006-08-01&quot;,1180.3563255026],[&quot;2006-09-01&quot;,1185.1568076441],[&quot;2006-10-01&quot;,1189.8709620237],[&quot;2006-11-01&quot;,1194.7715918494],[&quot;2006-12-01&quot;,1199.5789839114],[&quot;2007-01-01&quot;,1204.5991746248],[&quot;2007-02-01&quot;,1209.5129659112],[&quot;2007-03-01&quot;,1214.6645249834],[&quot;2007-04-01&quot;,1219.6972000093],[&quot;2007-05-01&quot;,1224.9774752068],[&quot;2007-06-01&quot;,1230.1339501604],[&quot;2007-07-01&quot;,1235.5366228092],[&quot;2007-08-01&quot;,1240.8161964809],[&quot;2007-09-01&quot;,1246.3587218201],[&quot;2007-10-01&quot;,1251.7697711732],[&quot;2007-11-01&quot;,1257.4831287798],[&quot;2007-12-01&quot;,1263.0453320252],[&quot;2008-01-01&quot;,1268.9514638624],[&quot;2008-02-01&quot;,1274.6856310878],[&quot;2008-03-01&quot;,1280.7975314671],[&quot;2008-04-01&quot;,1286.7205649005],[&quot;2008-05-01&quot;,1293.0337898707],[&quot;2008-06-01&quot;,1299.1519187124],[&quot;2008-07-01&quot;,1305.6675365997],[&quot;2008-08-01&quot;,1311.9844096285],[&quot;2008-09-01&quot;,1318.7380783905],[&quot;2008-10-01&quot;,1325.2733488936],[&quot;2008-11-01&quot;,1332.3043293526],[&quot;2008-12-01&quot;,1339.0874543426],[&quot;2009-01-01&quot;,1346.4216013234],[&quot;2009-02-01&quot;,1353.4802367389],[&quot;2009-03-01&quot;,1361.1268160322],[&quot;2009-04-01&quot;,1368.4794227931],[&quot;2009-05-01&quot;,1376.4300829082],[&quot;2009-06-01&quot;,1384.0817157999],[&quot;2009-07-01&quot;,1392.3272874793],[&quot;2009-08-01&quot;,1400.2758893001],[&quot;2009-09-01&quot;,1408.8214709167],[&quot;2009-10-01&quot;,1417.0685622339],[&quot;2009-11-01&quot;,1425.9015697398],[&quot;2009-12-01&quot;,1434.4416188443],[&quot;2010-01-01&quot;,1443.531020884],[&quot;2010-02-01&quot;,1452.345746296],[&quot;2010-03-01&quot;,1461.6565942708],[&quot;2010-04-01&quot;,1470.719380978],[&quot;2010-05-01&quot;,1480.2185852302],[&quot;2010-06-01&quot;,1489.4995808984],[&quot;2010-07-01&quot;,1499.1560155374],[&quot;2010-08-01&quot;,1508.6247310431],[&quot;2010-09-01&quot;,1518.4074444173],[&quot;2010-10-01&quot;,1528.0331593598],[&quot;2010-11-01&quot;,1537.9006162645],[&quot;2010-12-01&quot;,1547.6472028495],[&quot;2011-01-01&quot;,1557.5536431193],[&quot;2011-02-01&quot;,1567.3801573712],[&quot;2011-03-01&quot;,1577.2846394871],[&quot;2011-04-01&quot;,1587.1501386427],[&quot;2011-05-01&quot;,1597.0370183791],[&quot;2011-06-01&quot;,1606.9132088813],[&quot;2011-07-01&quot;,1616.7831610118],[&quot;2011-08-01&quot;,1626.6562334055],[&quot;2011-09-01&quot;,1636.509532076],[&quot;2011-10-01&quot;,1646.3727186773],[&quot;2011-11-01&quot;,1656.1865008238],[&quot;2011-12-01&quot;,1666.0249862871],[&quot;2012-01-01&quot;,1675.7668712443],[&quot;2012-02-01&quot;,1685.5570575918],[&quot;2012-03-01&quot;,1695.2043117012],[&quot;2012-04-01&quot;,1704.923033108],[&quot;2012-05-01&quot;,1714.481203383],[&quot;2012-06-01&quot;,1724.119650389],[&quot;2012-07-01&quot;,1733.5953176897],[&quot;2012-08-01&quot;,1743.1523759687],[&quot;2012-09-01&quot;,1752.5494432458],[&quot;2012-10-01&quot;,1762.0265071035],[&quot;2012-11-01&quot;,1771.3426141362],[&quot;2012-12-01&quot;,1780.7392006236],[&quot;2013-01-01&quot;,1789.9739469677],[&quot;2013-02-01&quot;,1799.2896143898],[&quot;2013-03-01&quot;,1807.7023872154],[&quot;2013-04-01&quot;,1816.5666094878],[&quot;2013-05-01&quot;,1824.4880671431],[&quot;2013-06-01&quot;,1832.8809092174],[&quot;2013-07-01&quot;,1841.2344819108],[&quot;2013-08-01&quot;,1849.6076899086],[&quot;2013-09-01&quot;,1858.0531590155],[&quot;2013-10-01&quot;,1866.4624979955],[&quot;2013-11-01&quot;,1874.9816289367],[&quot;2013-12-01&quot;,1883.4458642624],[&quot;2014-01-01&quot;,1892.0196701158],[&quot;2014-02-01&quot;,1900.5386910678],[&quot;2014-03-01&quot;,1909.1516218554],[&quot;2014-04-01&quot;,1917.7175981078],[&quot;2014-05-01&quot;,1926.356396945],[&quot;2014-06-01&quot;,1934.9587848989],[&quot;2014-07-01&quot;,1943.6131007238],[&quot;2014-08-01&quot;,1952.2414530463],[&quot;2014-09-01&quot;,1960.9031120454],[&quot;2014-10-01&quot;,1969.5481181585],[&quot;2014-11-01&quot;,1978.2099263491],[&quot;2014-12-01&quot;,1986.8633339677],[&quot;2015-01-01&quot;,1995.5189518006],[&quot;2015-02-01&quot;,2004.1734650038],[&quot;2015-03-01&quot;,2012.8171620515],[&quot;2015-04-01&quot;,2021.466267662],[&quot;2015-05-01&quot;,2030.0925691666],[&quot;2015-06-01&quot;,2038.7302732145],[&quot;2015-07-01&quot;,2047.3355373825],[&quot;2015-08-01&quot;,2055.9570219822],[&quot;2015-09-01&quot;,2064.5386891226],[&quot;2015-10-01&quot;,2073.1402654825],[&quot;2015-11-01&quot;,2081.6954860478],[&quot;2015-12-01&quot;,2090.2738849972],[&quot;2016-01-01&quot;,2098.7994894538],[&quot;2016-02-01&quot;,2107.35149164],[&quot;2016-03-01&quot;,2115.8447107318],[&quot;2016-04-01&quot;,2124.3673218499],[&quot;2016-05-01&quot;,2132.8260289317],[&quot;2016-06-01&quot;,2141.3166885055],[&quot;2016-07-01&quot;,2149.7394921653],[&quot;2016-08-01&quot;,2158.1962242492],[&quot;2016-09-01&quot;,2166.5826082526],[&quot;2016-10-01&quot;,2175.004166755],[&quot;2016-11-01&quot;,2183.3539814962],[&quot;2016-12-01&quot;,2191.7396685673],[&quot;2017-01-01&quot;,2200.0520634332],[&quot;2017-02-01&quot;,2208.4011048418],[&quot;2017-03-01&quot;,2216.6749274422],[&quot;2017-04-01&quot;,2224.9863598785],[&quot;2017-05-01&quot;,2233.2211307124],[&quot;2017-06-01&quot;,2241.4942327706],[&quot;2017-07-01&quot;,2249.6913356828],[&quot;2017-08-01&quot;,2257.9264385802],[&quot;2017-09-01&quot;,2266.0883738163],[&quot;2017-10-01&quot;,2274.2868932824],[&quot;2017-11-01&quot;,2282.4158067473],[&quot;2017-12-01&quot;,2290.5795235988],[&quot;2018-01-01&quot;,2298.6760735801],[&quot;2018-02-01&quot;,2306.806207371],[&quot;2018-03-01&quot;,2314.8711120257],[&quot;2018-04-01&quot;,2322.9686316123],[&quot;2018-05-01&quot;,2331.0029860964],[&quot;2018-06-01&quot;,2339.0689234854],[&quot;2018-07-01&quot;,2347.0751392106],[&quot;2018-08-01&quot;,2355.1112161098],[&quot;2018-09-01&quot;,2363.1053041358],[&quot;2018-12-31&quot;,2371.1007376425],[&quot;2019-01-01&quot;,2347.0753828601],[&quot;2019-01-02&quot;,2371.1212740748],[&quot;2019-01-03&quot;,2347.0960241333],[&quot;2019-01-04&quot;,2371.1418104181],[&quot;2019-01-05&quot;,2347.1166653157],[&quot;2019-01-06&quot;,2371.1623466725],[&quot;2019-01-07&quot;,2347.1373064073],[&quot;2019-01-08&quot;,2371.182882838],[&quot;2019-01-09&quot;,2347.1579474081],[&quot;2019-01-10&quot;,2371.2034189146],[&quot;2019-01-11&quot;,2347.1785883182],[&quot;2019-01-12&quot;,2371.2239549022],[&quot;2019-01-13&quot;,2347.1992291376],[&quot;2019-01-14&quot;,2371.2444908009],[&quot;2019-01-15&quot;,2347.2198698661],[&quot;2019-01-16&quot;,2371.2650266106],[&quot;2019-01-17&quot;,2347.240510504],[&quot;2019-01-18&quot;,2371.2855623315],[&quot;2019-01-19&quot;,2347.261151051],[&quot;2019-01-20&quot;,2371.3060979634],[&quot;2019-01-21&quot;,2347.2817915074],[&quot;2019-01-22&quot;,2371.3266335064],[&quot;2019-01-23&quot;,2347.3024318729]],&quot;columns&quot;:[&quot;date&quot;,&quot;pred&quot;]}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
     <h3>src/app/services/monthMedianData.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
@@ -293,6 +1476,36 @@
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>{&#x27;data&#x27;:[[&#x27;2000-02-01&#x27;,2000.0],[&#x27;2000-03-01&#x27;,1136.0],[&#x27;2000-04-01&#x27;,1000.0],[&#x27;2000-05-01&#x27;,965.0],[&#x27;2000-06-01&#x27;,1079.5],[&#x27;2000-07-01&#x27;,1128.0],[&#x27;2000-08-01&#x27;,1064.0],[&#x27;2000-09-01&#x27;,1080.0],[&#x27;2000-10-01&#x27;,1000.0],[&#x27;2000-11-01&#x27;,1050.0],[&#x27;2000-12-01&#x27;,1031.0],[&#x27;2001-01-01&#x27;,1660.0],[&#x27;2001-02-01&#x27;,1504.0],[&#x27;2001-03-01&#x27;,1150.0],[&#x27;2001-04-01&#x27;,975.5],[&#x27;2001-05-01&#x27;,945.0],[&#x27;2001-06-01&#x27;,857.0],[&#x27;2001-07-01&#x27;,840.0],[&#x27;2001-08-01&#x27;,862.0],[&#x27;2001-09-01&#x27;,869.0],[&#x27;2001-10-01&#x27;,860.0],[&#x27;2001-11-01&#x27;,964.0],[&#x27;2001-12-01&#x27;,1000.0],[&#x27;2002-01-01&#x27;,1244.0],[&#x27;2002-02-01&#x27;,1450.0],[&#x27;2002-03-01&#x27;,1000.0],[&#x27;2002-04-01&#x27;,1000.0],[&#x27;2002-05-01&#x27;,880.0],[&#x27;2002-06-01&#x27;,889.0],[&#x27;2002-07-01&#x27;,900.0],[&#x27;2002-08-01&#x27;,840.0],[&#x27;2002-09-01&#x27;,853.0],[&#x27;2002-10-01&#x27;,900.0],[&#x27;2002-11-01&#x27;,1000.0],[&#x27;2002-12-01&#x27;,1058.0],[&#x27;2003-01-01&#x27;,1330.0],[&#x27;2003-02-01&#x27;,1978.0],[&#x27;2003-03-01&#x27;,1087.0],[&#x27;2003-04-01&#x27;,1000.0],[&#x27;2003-05-01&#x27;,920.5],[&#x27;2003-06-01&#x27;,893.0],[&#x27;2003-07-01&#x27;,906.0],[&#x27;2003-08-01&#x27;,880.0],[&#x27;2003-09-01&#x27;,950.0],[&#x27;2003-10-01&#x27;,900.0],[&#x27;2003-11-01&#x27;,930.0],[&#x27;2003-12-01&#x27;,1000.0],[&#x27;2004-01-01&#x27;,1500.0],[&#x27;2004-02-01&#x27;,2000.0],[&#x27;2004-03-01&#x27;,1200.0],[&#x27;2004-04-01&#x27;,1000.0],[&#x27;2004-05-01&#x27;,1044.0],[&#x27;2004-06-01&#x27;,1000.0],[&#x27;2004-07-01&#x27;,994.0],[&#x27;2004-08-01&#x27;,1000.0],[&#x27;2004-09-01&#x27;,1017.5],[&#x27;2004-10-01&#x27;,1016.5],[&#x27;2004-11-01&#x27;,1067.0],[&#x27;2004-12-01&#x27;,1156.0],[&#x27;2005-01-01&#x27;,1610.0],[&#x27;2005-02-01&#x27;,2978.0],[&#x27;2005-03-01&#x27;,1532.0],[&#x27;2005-04-01&#x27;,1209.0],[&#x27;2005-05-01&#x27;,1183.0],[&#x27;2005-06-01&#x27;,1140.0],[&#x27;2005-07-01&#x27;,1129.0],[&#x27;2005-08-01&#x27;,1100.0],[&#x27;2005-09-01&#x27;,1050.0],[&#x27;2005-10-01&#x27;,1050.0],[&#x27;2005-11-01&#x27;,1100.0],[&#x27;2005-12-01&#x27;,1305.0],[&#x27;2006-01-01&#x27;,1785.0],[&#x27;2006-02-01&#x27;,2000.0],[&#x27;2006-03-01&#x27;,1272.0],[&#x27;2006-04-01&#x27;,1005.0],[&#x27;2006-05-01&#x27;,1048.5],[&#x27;2006-06-01&#x27;,1004.0],[&#x27;2006-07-01&#x27;,1029.0],[&#x27;2006-08-01&#x27;,1060.0],[&#x27;2006-09-01&#x27;,1055.0],[&#x27;2006-10-01&#x27;,1061.0],[&#x27;2006-11-01&#x27;,1100.0],[&#x27;2006-12-01&#x27;,1200.0],[&#x27;2007-01-01&#x27;,1639.0],[&#x27;2007-02-01&#x27;,2031.0],[&#x27;2007-03-01&#x27;,1336.0],[&#x27;2007-04-01&#x27;,1131.0],[&#x27;2007-05-01&#x27;,1140.0],[&#x27;2007-06-01&#x27;,1050.0],[&#x27;2007-07-01&#x27;,1080.0],[&#x27;2007-08-01&#x27;,1085.0],[&#x27;2007-09-01&#x27;,1078.0],[&#x27;2007-10-01&#x27;,1020.0],[&#x27;2007-11-01&#x27;,1154.0],[&#x27;2007-12-01&#x27;,1324.0],[&#x27;2008-01-01&#x27;,2000.0],[&#x27;2008-02-01&#x27;,1830.0],[&#x27;2008-03-01&#x27;,1315.0],[&#x27;2008-04-01&#x27;,1224.0],[&#x27;2008-05-01&#x27;,1099.0],[&#x27;2008-06-01&#x27;,1108.0],[&#x27;2008-07-01&#x27;,1130.0],[&#x27;2008-08-01&#x27;,1147.5],[&#x27;2008-09-01&#x27;,1160.0],[&#x27;2008-10-01&#x27;,1150.0],[&#x27;2008-11-01&#x27;,1274.0],[&#x27;2008-12-01&#x27;,1350.0],[&#x27;2009-01-01&#x27;,2000.0],[&#x27;2009-02-01&#x27;,1941.0],[&#x27;2009-03-01&#x27;,1500.0],[&#x27;2009-04-01&#x27;,1374.5],[&#x27;2009-05-01&#x27;,1262.0],[&#x27;2009-06-01&#x27;,1212.0],[&#x27;2009-07-01&#x27;,1200.0],[&#x27;2009-08-01&#x27;,1250.0],[&#x27;2009-09-01&#x27;,1198.0],[&#x27;2009-10-01&#x27;,1237.5],[&#x27;2009-11-01&#x27;,1313.0],[&#x27;2009-12-01&#x27;,1556.0],[&#x27;2010-01-01&#x27;,2302.0],[&#x27;2010-02-01&#x27;,2000.0],[&#x27;2010-03-01&#x27;,1650.0],[&#x27;2010-04-01&#x27;,1456.0],[&#x27;2010-05-01&#x27;,1340.0],[&#x27;2010-06-01&#x27;,1400.0],[&#x27;2010-07-01&#x27;,1280.0],[&#x27;2010-08-01&#x27;,1400.0],[&#x27;2010-09-01&#x27;,1337.0],[&#x27;2010-10-01&#x27;,1397.0],[&#x27;2010-11-01&#x27;,1410.0],[&#x27;2010-12-01&#x27;,1750.5],[&#x27;2011-01-01&#x27;,2500.0],[&#x27;2011-02-01&#x27;,2190.0],[&#x27;2011-03-01&#x27;,1497.0],[&#x27;2011-04-01&#x27;,1467.0],[&#x27;2011-05-01&#x27;,1320.0],[&#x27;2011-06-01&#x27;,1310.0],[&#x27;2011-07-01&#x27;,1300.0],[&#x27;2011-08-01&#x27;,1319.0],[&#x27;2011-09-01&#x27;,1430.0],[&#x27;2011-10-01&#x27;,1454.0],[&#x27;2011-11-01&#x27;,1700.0],[&#x27;2011-12-01&#x27;,2162.0],[&#x27;2012-01-01&#x27;,2850.0],[&#x27;2012-02-01&#x27;,2580.0],[&#x27;2012-03-01&#x27;,1762.0],[&#x27;2012-04-01&#x27;,1739.0],[&#x27;2012-05-01&#x27;,1546.5],[&#x27;2012-06-01&#x27;,1557.0],[&#x27;2012-07-01&#x27;,1693.5],[&#x27;2012-08-01&#x27;,1729.0],[&#x27;2012-09-01&#x27;,1609.0],[&#x27;2012-10-01&#x27;,1700.0],[&#x27;2012-11-01&#x27;,2050.0],[&#x27;2012-12-01&#x27;,2520.0],[&#x27;2013-01-01&#x27;,2985.0],[&#x27;2013-02-01&#x27;,2798.0],[&#x27;2013-03-01&#x27;,2003.0],[&#x27;2013-04-01&#x27;,1800.0],[&#x27;2013-05-01&#x27;,1740.0],[&#x27;2013-06-01&#x27;,1800.0],[&#x27;2013-07-01&#x27;,1750.0],[&#x27;2013-08-01&#x27;,1790.0],[&#x27;2013-09-01&#x27;,1803.0],[&#x27;2013-10-01&#x27;,1800.0],[&#x27;2013-11-01&#x27;,2276.0],[&#x27;2013-12-01&#x27;,2790.0],[&#x27;2014-01-01&#x27;,3148.0],[&#x27;2014-02-01&#x27;,3137.0],[&#x27;2014-03-01&#x27;,2274.5],[&#x27;2014-04-01&#x27;,2025.0],[&#x27;2014-05-01&#x27;,2000.0],[&#x27;2014-06-01&#x27;,1990.0],[&#x27;2014-07-01&#x27;,2000.0],[&#x27;2014-08-01&#x27;,1980.0],[&#x27;2014-09-01&#x27;,1920.0],[&#x27;2014-10-01&#x27;,1990.0],[&#x27;2014-11-01&#x27;,2180.0],[&#x27;2014-12-01&#x27;,2750.0],[&#x27;2015-01-01&#x27;,3874.5],[&#x27;2015-02-01&#x27;,4301.0],[&#x27;2015-03-01&#x27;,2346.5],[&#x27;2015-04-01&#x27;,2164.5],[&#x27;2015-05-01&#x27;,2015.0],[&#x27;2015-06-01&#x27;,1912.0],[&#x27;2015-07-01&#x27;,2000.0],[&#x27;2015-08-01&#x27;,1909.0],[&#x27;2015-09-01&#x27;,1980.0],[&#x27;2015-10-01&#x27;,1995.0],[&#x27;2015-11-01&#x27;,2400.0],[&#x27;2015-12-01&#x27;,2816.0],[&#x27;2016-01-01&#x27;,3963.0],[&#x27;2016-02-01&#x27;,3786.0],[&#x27;2016-03-01&#x27;,2324.0],[&#x27;2016-04-01&#x27;,2030.0],[&#x27;2016-05-01&#x27;,2000.0],[&#x27;2016-06-01&#x27;,2140.0],[&#x27;2016-07-01&#x27;,2059.0],[&#x27;2016-08-01&#x27;,2100.0],[&#x27;2016-09-01&#x27;,1900.0],[&#x27;2016-10-01&#x27;,2000.0],[&#x27;2016-11-01&#x27;,2254.0],[&#x27;2016-12-01&#x27;,2900.0],[&#x27;2017-01-01&#x27;,3496.0],[&#x27;2017-02-01&#x27;,3452.5],[&#x27;2017-03-01&#x27;,2556.0],[&#x27;2017-04-01&#x27;,2158.0],[&#x27;2017-05-01&#x27;,2000.0],[&#x27;2017-06-01&#x27;,2000.0],[&#x27;2017-07-01&#x27;,2019.0],[&#x27;2017-08-01&#x27;,2000.0],[&#x27;2017-09-01&#x27;,1992.0],[&#x27;2017-10-01&#x27;,2117.0],[&#x27;2017-11-01&#x27;,2346.0],[&#x27;2017-12-01&#x27;,2800.0],[&#x27;2018-01-01&#x27;,4000.0],[&#x27;2018-02-01&#x27;,3715.5],[&#x27;2018-03-01&#x27;,2355.0],[&#x27;2018-04-01&#x27;,2371.0],[&#x27;2018-05-01&#x27;,2097.0],[&#x27;2018-06-01&#x27;,2260.0],[&#x27;2018-07-01&#x27;,2028.0],[&#x27;2018-08-01&#x27;,2260.0],[&#x27;2018-09-01&#x27;,2300.0],[&#x27;2018-10-01&#x27;,2290.0],[&#x27;2018-11-01&#x27;,2800.0],[&#x27;2018-12-01&#x27;,3530.0]],&#x27;columns&#x27;:[&#x27;date&#x27;,&#x27;median_value&#x27;]}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/services/somaGastosPredicaoData.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="soma_gastos_predicao"></a>
+                        <span class="name">
+                            <b>
+                            soma_gastos_predicao</b>
+                            <a href="#soma_gastos_predicao"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{&quot;data&quot;:[[&quot;2000-02-01&quot;,315268402.7695707083],[&quot;2000-03-01&quot;,319424629.2919868231],[&quot;2000-04-01&quot;,323575751.302831769],[&quot;2000-05-01&quot;,327737811.5200713873],[&quot;2000-06-01&quot;,331894401.2223988771],[&quot;2000-07-01&quot;,336063252.9330939651],[&quot;2000-08-01&quot;,340225972.3109691143],[&quot;2000-09-01&quot;,344402920.2001495361],[&quot;2000-10-01&quot;,348572752.5967624784],[&quot;2000-11-01&quot;,352759205.9323903918],[&quot;2000-12-01&quot;,356937347.6577000618],[&quot;2001-01-01&quot;,361133658.3710489273],[&quot;2001-02-01&quot;,365320883.5251507759],[&quot;2001-03-01&quot;,369524761.8611164093],[&quot;2001-04-01&quot;,373720312.5529453754],[&quot;2001-05-01&quot;,377930722.3477190137],[&quot;2001-06-01&quot;,382133701.5435141325],[&quot;2001-07-01&quot;,386350567.9461205602],[&quot;2001-08-01&quot;,390560489.718657732],[&quot;2001-09-01&quot;,394783588.7979769111],[&quot;2001-10-01&quot;,399000098.2212774754],[&quot;2001-11-01&quot;,403228800.6253809333],[&quot;2001-12-01&quot;,407451405.553180933],[&quot;2002-01-01&quot;,411684642.7146375775],[&quot;2002-02-01&quot;,415912562.7772539854],[&quot;2002-03-01&quot;,420148231.4903766513],[&quot;2002-04-01&quot;,424380024.8726403713],[&quot;2002-05-01&quot;,428616371.3118777871],[&quot;2002-06-01&quot;,432850440.187874198],[&quot;2002-07-01&quot;,437085760.9438561797],[&quot;2002-08-01&quot;,441320454.6935319304],[&quot;2002-09-01&quot;,445553074.6638613343],[&quot;2002-10-01&quot;,449786730.4249652624],[&quot;2002-11-01&quot;,454015365.2413637638],[&quot;2002-12-01&quot;,458246509.4058772922],[&quot;2003-01-01&quot;,462469708.4690209031],[&quot;2003-02-01&quot;,466696878.9322276115],[&quot;2003-03-01&quot;,470913326.8265011311],[&quot;2003-04-01&quot;,475135134.8304035068],[&quot;2003-05-01&quot;,479344516.9916647673],[&quot;2003-06-01&quot;,483560110.8970577121],[&quot;2003-07-01&quot;,487762628.8778582811],[&quot;2003-08-01&quot;,491971683.6607940793],[&quot;2003-09-01&quot;,496168590.6291950345],[&quot;2003-10-01&quot;,500371570.3926488757],[&quot;2003-11-01&quot;,504564817.1391513944],[&quot;2003-12-01&quot;,508762929.3574274778],[&quot;2004-01-01&quot;,512953603.7623873949],[&quot;2004-02-01&quot;,517147996.1046181321],[&quot;2004-03-01&quot;,521335621.4241023064],[&quot;2004-04-01&quot;,525526629.3152710199],[&quot;2004-05-01&quot;,529711825.6722648144],[&quot;2004-06-01&quot;,533899926.896876514],[&quot;2004-07-01&quot;,538086546.545156002],[&quot;2004-08-01&quot;,542273906.1979131699],[&quot;2004-09-01&quot;,546468454.6158494949],[&quot;2004-10-01&quot;,550659408.070609808],[&quot;2004-11-01&quot;,554871101.9603589773],[&quot;2004-12-01&quot;,559072425.3503820896],[&quot;2005-01-01&quot;,563315074.6654469967],[&quot;2005-02-01&quot;,567537061.1746449471],[&quot;2005-03-01&quot;,571828885.205724597],[&quot;2005-04-01&quot;,576085791.217888236],[&quot;2005-05-01&quot;,580458781.1438989639],[&quot;2005-06-01&quot;,584773730.7967207432],[&quot;2005-07-01&quot;,589968954.3089163303],[&quot;2005-08-01&quot;,594724058.7494220734],[&quot;2005-09-01&quot;,600628657.5253226757],[&quot;2005-10-01&quot;,605958527.1562851667],[&quot;2005-11-01&quot;,611856667.0590381622],[&quot;2005-12-01&quot;,617470678.1062939167],[&quot;2006-01-01&quot;,623666732.794225812],[&quot;2006-02-01&quot;,629571773.3194770813],[&quot;2006-03-01&quot;,636034020.7346866131],[&quot;2006-04-01&quot;,642217671.6406903267],[&quot;2006-05-01&quot;,648915515.3981041908],[&quot;2006-06-01&quot;,655356268.7876716852],[&quot;2006-07-01&quot;,662264661.6096320152],[&quot;2006-08-01&quot;,668939239.9217410088],[&quot;2006-09-01&quot;,676026234.5485187769],[&quot;2006-10-01&quot;,682907025.3035395145],[&quot;2006-11-01&quot;,690154943.3903418779],[&quot;2006-12-01&quot;,697219301.3649024963],[&quot;2007-01-01&quot;,704582554.616625309],[&quot;2007-02-01&quot;,711796362.7743476629],[&quot;2007-03-01&quot;,719215661.6642519236],[&quot;2007-04-01&quot;,726532216.4369223118],[&quot;2007-05-01&quot;,733963147.1094791889],[&quot;2007-06-01&quot;,741336889.8604274988],[&quot;2007-07-01&quot;,748761180.761095643],[&quot;2007-08-01&quot;,756160196.7852300406],[&quot;2007-09-01&quot;,763575479.0870137215],[&quot;2007-10-01&quot;,770982627.0263440609],[&quot;2007-11-01&quot;,778406805.3821377754],[&quot;2007-12-01&quot;,785822467.3590199947],[&quot;2008-01-01&quot;,793252563.2565816641],[&quot;2008-02-01&quot;,800675441.0242666006],[&quot;2008-03-01&quot;,808157453.0856263638],[&quot;2008-04-01&quot;,815609897.4712795019],[&quot;2008-05-01&quot;,823201167.4291805029],[&quot;2008-06-01&quot;,830723025.1519255638],[&quot;2008-07-01&quot;,838475342.6928905249],[&quot;2008-08-01&quot;,846112432.0581996441],[&quot;2008-09-01&quot;,854077538.9389439821],[&quot;2008-10-01&quot;,861878639.9899581671],[&quot;2008-11-01&quot;,870071684.648452282],[&quot;2008-12-01&quot;,878068761.1199240685],[&quot;2009-01-01&quot;,886484397.3443800211],[&quot;2009-02-01&quot;,894690757.5061166286],[&quot;2009-03-01&quot;,903331116.7570791245],[&quot;2009-04-01&quot;,911754480.3445446491],[&quot;2009-05-01&quot;,920627038.8140655756],[&quot;2009-06-01&quot;,929275003.7880198956],[&quot;2009-07-01&quot;,938401669.2294436693],[&quot;2009-08-01&quot;,947288988.6095565557],[&quot;2009-09-01&quot;,956677238.1158504486],[&quot;2009-10-01&quot;,965815026.8551925421],[&quot;2009-11-01&quot;,975486545.1105061769],[&quot;2009-12-01&quot;,984891203.1386106014],[&quot;2010-01-01&quot;,994882916.4611868858],[&quot;2010-02-01&quot;,1004581107.1078824997],[&quot;2010-03-01&quot;,1014857899.3455872536],[&quot;2010-04-01&quot;,1024845395.5098631382],[&quot;2010-05-01&quot;,1035347388.9732431173],[&quot;2010-06-01&quot;,1045592137.6932624578],[&quot;2010-07-01&quot;,1056262603.4964343309],[&quot;2010-08-01&quot;,1066720213.6299654245],[&quot;2010-09-01&quot;,1077518446.7117319107],[&quot;2010-10-01&quot;,1088146370.2332777977],[&quot;2010-11-01&quot;,1099038742.3952550888],[&quot;2010-12-01&quot;,1109798891.3186378479],[&quot;2011-01-01&quot;,1120767390.6058824062],[&quot;2011-02-01&quot;,1131631715.1918890476],[&quot;2011-03-01&quot;,1142680281.9464988708],[&quot;2011-04-01&quot;,1153636727.8408915997],[&quot;2011-05-01&quot;,1164743347.4560239315],[&quot;2011-06-01&quot;,1175774880.0958817005],[&quot;2011-07-01&quot;,1186913136.8889799118],[&quot;2011-08-01&quot;,1197998031.0646348],[&quot;2011-09-01&quot;,1209154621.5169143677],[&quot;2011-10-01&quot;,1220275362.9559221268],[&quot;2011-11-01&quot;,1231415512.6365630627],[&quot;2011-12-01&quot;,1242545956.8230109215],[&quot;2012-01-01&quot;,1253635910.5160322189],[&quot;2012-02-01&quot;,1264746107.5116541386],[&quot;2012-03-01&quot;,1275806579.4650816917],[&quot;2012-04-01&quot;,1286891911.9435510635],[&quot;2012-05-01&quot;,1297933583.860222578],[&quot;2012-06-01&quot;,1308997084.1694979668],[&quot;2012-07-01&quot;,1320048872.15102911],[&quot;2012-08-01&quot;,1331106514.7791910172],[&quot;2012-09-01&quot;,1342234972.5856468678],[&quot;2012-10-01&quot;,1353328022.1687748432],[&quot;2012-11-01&quot;,1364596651.0211577415],[&quot;2012-12-01&quot;,1375777490.6857981682],[&quot;2013-01-01&quot;,1387211377.9764847755],[&quot;2013-02-01&quot;,1398518742.6619086266],[&quot;2013-03-01&quot;,1410799946.2318944931],[&quot;2013-04-01&quot;,1422594238.6939749718],[&quot;2013-05-01&quot;,1435995560.7740094662],[&quot;2013-06-01&quot;,1448593381.6789643764],[&quot;2013-07-01&quot;,1462009776.9538710117],[&quot;2013-08-01&quot;,1475016890.8667805195],[&quot;2013-09-01&quot;,1488495916.6823279858],[&quot;2013-10-01&quot;,1501738989.2342057228],[&quot;2013-11-01&quot;,1515231073.608746767],[&quot;2013-12-01&quot;,1528598652.716458559],[&quot;2014-01-01&quot;,1542089320.7794146538],[&quot;2014-02-01&quot;,1555518443.8678424358],[&quot;2014-03-01&quot;,1569005094.151743412],[&quot;2014-04-01&quot;,1582462979.7662346363],[&quot;2014-05-01&quot;,1595945631.7884407043],[&quot;2014-06-01&quot;,1609415899.2693223953],[&quot;2014-07-01&quot;,1622897295.9026660919],[&quot;2014-08-01&quot;,1636373126.5343532562],[&quot;2014-09-01&quot;,1649856624.761030674],[&quot;2014-10-01&quot;,1663336287.769900322],[&quot;2014-11-01&quot;,1676823744.136813879],[&quot;2014-12-01&quot;,1690307302.4411306381],[&quot;2015-01-01&quot;,1703798157.3951778412],[&quot;2015-02-01&quot;,1717285362.6705052853],[&quot;2015-03-01&quot;,1730777711.5648651123],[&quot;2015-04-01&quot;,1744267487.3094139099],[&quot;2015-05-01&quot;,1757761983.5720796585],[&quot;2015-06-01&quot;,1771254118.2637987137],[&quot;2015-07-01&quot;,1784751949.5173363686],[&quot;2015-08-01&quot;,1798246931.2177615166],[&quot;2015-09-01&quot;,1811746970.1755402088],[&quot;2015-10-01&quot;,1825244479.2558040619],[&quot;2015-11-01&quot;,1838749042.7384195328],[&quot;2015-12-01&quot;,1852250077.8179850578],[&quot;2016-01-01&quot;,1865761753.6020305157],[&quot;2016-02-01&quot;,1879268107.8914563656],[&quot;2016-03-01&quot;,1892789545.1107647419],[&quot;2016-04-01&quot;,1906303439.7881908417],[&quot;2016-05-01&quot;,1919836986.5419957638],[&quot;2016-06-01&quot;,1933360706.2455182076],[&quot;2016-07-01&quot;,1946910013.2500975132],[&quot;2016-08-01&quot;,1960446525.6682260036],[&quot;2016-09-01&quot;,1974015505.7060139179],[&quot;2016-10-01&quot;,1987568251.0808961391],[&quot;2016-11-01&quot;,2001159191.561568737],[&quot;2016-12-01&quot;,2014731033.7062485218],[&quot;2017-01-01&quot;,2028346454.3213148117],[&quot;2017-02-01&quot;,2041940084.9842407703],[&quot;2017-03-01&quot;,2055583211.4082775116],[&quot;2017-04-01&quot;,2069201589.3050191402],[&quot;2017-05-01&quot;,2082875673.0812506676],[&quot;2017-06-01&quot;,2096521903.3423578739],[&quot;2017-07-01&quot;,2110233398.5355446339],[&quot;2017-08-01&quot;,2123912260.7889940739],[&quot;2017-09-01&quot;,2137668332.5760040283],[&quot;2017-10-01&quot;,2151385799.2425794601],[&quot;2017-11-01&quot;,2165188857.0974264145],[&quot;2017-12-01&quot;,2178949119.0866546631],[&quot;2018-01-01&quot;,2192800166.6370105743],[&quot;2018-02-01&quot;,2206605821.1887893677],[&quot;2018-03-01&quot;,2220504995.3503875732],[&quot;2018-04-01&quot;,2234357409.5209879875],[&quot;2018-05-01&quot;,2248302804.3720078468],[&quot;2018-06-01&quot;,2262201708.6991019249],[&quot;2018-07-01&quot;,2276191744.1298546791],[&quot;2018-08-01&quot;,2290136213.8179097176],[&quot;2018-09-01&quot;,2304149092.89752388],[&quot;2018-12-31&quot;,2304149092.89752388],[&quot;2019-01-01&quot;,2262248320.8430080414],[&quot;2019-01-02&quot;,2304216613.0311346054],[&quot;2019-01-03&quot;,2262315950.3705720901],[&quot;2019-01-04&quot;,2304284134.162979126],[&quot;2019-01-05&quot;,2262383580.8998746872],[&quot;2019-01-06&quot;,2304351656.293056488],[&quot;2019-01-07&quot;,2262451212.4309167862],[&quot;2019-01-08&quot;,2304419179.4213671684],[&quot;2019-01-09&quot;,2262518844.9636974335],[&quot;2019-01-10&quot;,2304486703.5479111671],[&quot;2019-01-11&quot;,2262586478.4982175827],[&quot;2019-01-12&quot;,2304554228.6726880074],[&quot;2019-01-13&quot;,2262654113.034476757],[&quot;2019-01-14&quot;,2304621754.7956981659],[&quot;2019-01-15&quot;,2262721748.5724744797],[&quot;2019-01-16&quot;,2304689281.9169411659],[&quot;2019-01-17&quot;,2262789385.1122117043],[&quot;2019-01-18&quot;,2304756810.0364170074],[&quot;2019-01-19&quot;,2262857022.6536879539],[&quot;2019-01-20&quot;,2304824339.1541261673],[&quot;2019-01-21&quot;,2262924661.1969032288],[&quot;2019-01-22&quot;,2304891869.2700681686],[&quot;2019-01-23&quot;,2262992300.7418580055]],&quot;columns&quot;:[&quot;date&quot;,&quot;pred&quot;]}</code>
                         </td>
                     </tr>
 

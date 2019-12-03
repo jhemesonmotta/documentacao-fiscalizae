@@ -240,25 +240,20 @@ export class SideBarComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;sidebar&quot; data-color&#x3D;&quot;purple&quot; data-background-color&#x3D;&quot;black&quot;&gt;
   &lt;div class&#x3D;&quot;logo&quot;&gt;
     &lt;a class&#x3D;&quot;simple-text logo-normal&quot;&gt;
-      &lt;img src&#x3D;&quot;/assets/img/tax_yellow.png&quot; alt&#x3D;&quot;Logo&quot; class&#x3D;&quot;logo-side&quot;&gt;
+      &lt;img src&#x3D;&quot;./assets/img/tax_yellow.png&quot; alt&#x3D;&quot;Logo&quot; class&#x3D;&quot;logo-side&quot;&gt;
       &lt;br&gt;
       FiscalizAê!
     &lt;/a&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;sidebar-wrapper&quot;&gt;
     &lt;p&gt;
-        As compras governamentais são realizadas a partir de um processo público
-        regido pela Lei Federal 8.666/93 (lei das licitações). Existem
-        várias modalidades de compras, além de um artefato que permite a dispensa e a realização da
-        contratação direta sem licitação - esse artificio possibilita ao gestor público comprar
-        produtos e contratar serviços de forma rápida. Em contraponto, esta possibilidade também
-        permite que compras suspeitas sejam realizadas mais facilmente já que não há um processo de licitação.
         Este trabalho propõe uma analise sobre a variação de preços de compras
         governamentais sem licitação. A análise dos dados é realizada a partir do ajuste das
         séries históricas através do método dos mínimos quadrados e Splines, além da
         Transformada Rápida de Fourier (FFT). Todos os dados utilizados são abertos.
     &lt;/p&gt;
-    &lt;a href&#x3D;&quot;compodoc/index.html&quot; target&#x3D;&quot;_blank&quot;&gt;
+    
+    &lt;a class&#x3D;&quot;btn btn-documentacao btn-menu&quot; href&#x3D;&quot;https://jhemesonmotta.github.io/documentacao-fiscalizae/index.html&quot; target&#x3D;&quot;_blank&quot;&gt;
       Documentação
      &lt;/a&gt;
   &lt;/div&gt;
@@ -269,7 +264,15 @@ export class SideBarComponent implements OnInit {
                 <p class="comment">
                     <code>./side-bar.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">
+                <pre class="line-numbers"><code class="language-scss">.btn-documentacao{
+    background-color: #E3B35C;
+    width: 100%;
+    color: #1F283D;
+}
+
+.btn-documentacao:hover{
+    background-color: #C1913A;
+}
 
 .logo-side, .sidebar-wrapper{
     width: 80%;
@@ -304,7 +307,7 @@ export class SideBarComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="sidebar" data-color="purple" data-background-color="black">  <div class="logo">    <a class="simple-text logo-normal">      <img src="/assets/img/tax_yellow.png" alt="Logo" class="logo-side">      <br>      FiscalizAê!    </a>  </div>  <div class="sidebar-wrapper">    <p>        As compras governamentais são realizadas a partir de um processo público        regido pela Lei Federal 8.666/93 (lei das licitações). Existem        várias modalidades de compras, além de um artefato que permite a dispensa e a realização da        contratação direta sem licitação - esse artificio possibilita ao gestor público comprar        produtos e contratar serviços de forma rápida. Em contraponto, esta possibilidade também        permite que compras suspeitas sejam realizadas mais facilmente já que não há um processo de licitação.        Este trabalho propõe uma analise sobre a variação de preços de compras        governamentais sem licitação. A análise dos dados é realizada a partir do ajuste das        séries históricas através do método dos mínimos quadrados e Splines, além da        Transformada Rápida de Fourier (FFT). Todos os dados utilizados são abertos.    </p>    <a href="compodoc/index.html" target="_blank">      Documentação     </a>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="sidebar" data-color="purple" data-background-color="black">  <div class="logo">    <a class="simple-text logo-normal">      <img src="./assets/img/tax_yellow.png" alt="Logo" class="logo-side">      <br>      FiscalizAê!    </a>  </div>  <div class="sidebar-wrapper">    <p>        Este trabalho propõe uma analise sobre a variação de preços de compras        governamentais sem licitação. A análise dos dados é realizada a partir do ajuste das        séries históricas através do método dos mínimos quadrados e Splines, além da        Transformada Rápida de Fourier (FFT). Todos os dados utilizados são abertos.    </p>        <a class="btn btn-documentacao btn-menu" href="https://jhemesonmotta.github.io/documentacao-fiscalizae/index.html" target="_blank">      Documentação     </a>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'PartialEstatisticasRapidasComponent', 'selector': 'app-partial-estatisticas-rapidas'},{'name': 'PartialGraficosComponent', 'selector': 'app-partial-graficos'},{'name': 'PartialListasComponent', 'selector': 'app-partial-listas'},{'name': 'SideBarComponent', 'selector': 'app-side-bar'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SideBarComponent'};
